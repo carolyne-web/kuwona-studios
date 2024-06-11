@@ -19,11 +19,12 @@ body {
 .site-container {
   line-height: 1.6em;
   color: #777;
-  max-width: 1020px;
-  padding: 6vw;
+  max-width: 1200px;
+  padding: 5vw;
+  margin: auto;
 
   h1, h2, h3 {
-    font-weight: normal;
+    font-weight: 300;
     line-height: 1.2em;
   }
 
@@ -37,10 +38,25 @@ body {
 }
 
 .site-header {
-  margin-bottom: 4vw;
+  margin-bottom: 0vw;
 }
 
-.site-navigation { }
+.site-navigation {
+  display:flex;
+  justify-content: space-between;
+}
+
+/* Style for the logo */
+.site-navigation .logo {
+  text-align: center; /* Center the logo within the navigation */
+  margin-bottom: 20px; /* Add some space below the logo */
+}
+
+.site-navigation .logo img {
+  max-width: 100px; /* Adjust the size as needed */
+  height: auto;    /* Maintain aspect ratio */
+  display: inline-block; /* Ensure the image is displayed as an inline block */
+}
 
 .site-navigation-list {
   padding: 0;
@@ -55,7 +71,7 @@ body {
   }
 
   a {
-    color: #111;
+    color: #F2FBFB;
     text-decoration: none;
 
     &:hover {
@@ -91,9 +107,14 @@ body {
 /* Homepage
 ***************************************************/
 
-body.homepage { }
+body.homepage {
+  background-color: #001B1B;
+}
 
-
+.custom-header {
+  font-size: 100px;
+  margin-top: 0px !important;
+}
 
 /* Blog list
 ***************************************************/
@@ -113,5 +134,3 @@ body.collection-type-blog.view-list {
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
 }
-
-

@@ -26,6 +26,10 @@
       <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">
        {squarespace.main-content}
+        <h1 class="custom-header"> empowering ideas that
+            heal humanity
+            and transcend industry boundaries.
+        </h1>
       </main>
 
       <!--Footer with open block field -->

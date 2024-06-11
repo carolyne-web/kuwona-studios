@@ -19,5 +19,18 @@
       </li>
 
     {.end}
+      <li class="site-navigation-item">
+        <a href="/about">About</a>
+      </li>
+      <li class="site-navigation-item">
+        <a href="/portfolio">Portfolio</a>
+      </li>
+      <li class="site-navigation-item">
+        <a href="/insight">Insight</a>
+      </li>
+      <li class="site-navigation-item">
+        <a href="/contact">Contact</a>
+      </li>
+
   </ul>
 </nav>
