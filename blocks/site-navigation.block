@@ -1,7 +1,7 @@
 <nav class="site-navigation">
-<div class="logo">
+    <div class="logo">
         <a href="/">
-            <img src="assets/kuwona studios_transparent.png" alt="Logo">
+          kuwona studios
         </a>
     </div>
   <ul class="site-navigation-list">
@@ -36,6 +36,5 @@
       <li class="site-navigation-item">
         <a href="/contact">Contact</a>
       </li>
-
   </ul>
 </nav>

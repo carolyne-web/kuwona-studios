@@ -14,49 +14,57 @@ body {
     sans-serif;
   font-size: 100%;
   font-weight: normal;
+  // height: 100vh;
 }
 
 .site-container {
   line-height: 1.6em;
   color: #777;
   max-width: 1200px;
-  padding: 5vw;
-  margin: auto;
+  padding: 1vw 5vw;
+  margin: 0 auto;
+}
 
   h1, h2, h3 {
     font-weight: 300;
     line-height: 1.2em;
+    font-family: Satoshi-Light;
   }
 
   a {
-    color: cornflowerblue;
+    color: #F2FBFB;
+    text-decoration: none;
 
     &.disabled {
       color: #ccc;
     }
   }
-}
+
 
 .site-header {
   margin-bottom: 0vw;
 }
 
 .site-navigation {
-  display:flex;
+  text-transform: lowercase;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Style for the logo */
 .site-navigation .logo {
-  text-align: center; /* Center the logo within the navigation */
-  margin-bottom: 20px; /* Add some space below the logo */
+  font-size: 25px;
+  font-family: Satoshi-Regular;
+  // text-align: center; /* Center the logo within the navigation */
+  // margin-bottom: 20px; /* Add some space below the logo */
 }
 
-.site-navigation .logo img {
-  max-width: 100px; /* Adjust the size as needed */
-  height: auto;    /* Maintain aspect ratio */
-  display: inline-block; /* Ensure the image is displayed as an inline block */
-}
+// .site-navigation .logo img {
+//   max-width: 100px; /* Adjust the size as needed */
+//   height: auto;    /* Maintain aspect ratio */
+//   display: inline-block; /* Ensure the image is displayed as an inline block */
+// }
 
 .site-navigation-list {
   padding: 0;
@@ -64,7 +72,8 @@ body {
 
 .site-navigation-item {
   display: inline-block;
-  font-size: 87.5%;
+  font-size: 19px;
+  font-family: Satoshi-Light;
 
   & + .site-navigation-item {
     margin-left: 1em;
@@ -86,12 +95,12 @@ body {
 }
 
 .site-title-heading {
-
-  .site-title-link {
-    color: #111;
-    font-weight: 400;
-    text-decoration: none;
-  }
+  display: none;
+  // .site-title-link {
+  //   color: #111;
+  //   font-weight: 400;
+  //   text-decoration: none;
+  // }
 }
 
 .content-container { }
@@ -100,6 +109,12 @@ body {
   font-size: 75%;
   margin-top: 4vw;
   margin-bottom: 4vw;
+}
+.horizontal-line {
+  border: none; /* Remove default border */
+  border-top: 1px solid #F2FBFB; /* Add a solid line on the top */
+  margin: 20px 0; /* Adjust margin as needed */
+  width: 100%%;
 }
 
 
@@ -113,11 +128,17 @@ body.homepage {
 
 .custom-header {
   font-size: 100px;
-  margin-top: 0px !important;
+  margin-bottom: 30px !important;
   font-weight: 300;
-  color: #F2FBFB;
+  color: #777777;
 }
-
+.explore-link {
+  color:#F2FBFB;
+  font-family: Satoshi-LightItalic;
+  font-weight: 300;
+  font-size: 19px;
+  font-style: italic;
+}
 /* Blog list
 ***************************************************/
 

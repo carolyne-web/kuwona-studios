@@ -30,11 +30,12 @@
             heal humanity
             and transcend industry boundaries.
         </h1>
-        
+        <a href="/portfolio" class="explore-link"> explore our ventures </a>
       </main>
 
       <!--Footer with open block field -->
       <footer class="site-footer">
+          <hr class="horizontal-line">
         <squarespace:block-field id="footerBlocks" columns="12" />
       </footer>
 
