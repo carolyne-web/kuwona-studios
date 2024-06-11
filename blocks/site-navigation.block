@@ -1,4 +1,9 @@
 <nav class="site-navigation">
+<div class="logo">
+        <a href="/">
+            <img src="assets/kuwona studios_transparent.png" alt="Logo">
+        </a>
+    </div>
   <ul class="site-navigation-list">
     {.repeated section items}
 
