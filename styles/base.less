@@ -27,7 +27,7 @@ body {
   h1, h2, h3 {
     font-weight: 300;
     line-height: 1.2em;
-    font-family: Satoshi-Light;
+    font-family: "Satoshi-Light";
   }
 
   a {
@@ -54,7 +54,7 @@ body {
 /* Style for the logo */
 .site-navigation .logo {
   font-size: 25px;
-  font-family: Satoshi-Regular;
+  font-family: "Satoshi-Regular";
   // text-align: center; /* Center the logo within the navigation */
   // margin-bottom: 20px; /* Add some space below the logo */
 }
@@ -72,7 +72,7 @@ body {
 .site-navigation-item {
   display: inline-block;
   font-size: 19px;
-  font-family: Satoshi-Light;
+  font-family: "Satoshi-Light";
 
   & + .site-navigation-item {
     margin-left: 1em;
@@ -105,9 +105,12 @@ body {
 .content-container { }
 
 .site-footer {
-  font-size: 75%;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-size: 13px !important;
+  line-height: 1em;
+  color: #F2FBFB;
+  font-family: "Satoshi-Light";
 }
 .horizontal-line {
   border: none; /* Remove default border */
@@ -120,11 +123,21 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-.legal {
+.follow ul, .legal ul {
   list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.follow li, .legal li {
+  margin: 8px 0;
+}
+.footer-header {
+  // font-family: "Satoshi-Regular";
 }
 
+.footer-bottom {
+  margin-top: 1em;
+}
 /* Homepage
 ***************************************************/
 
