@@ -105,16 +105,16 @@ body {
 .content-container { }
 
 .site-footer {
-  margin-top: 1vw;
+  margin-top: 4vw;
   margin-bottom: 1vw;
-  font-size: 13px !important;
-  line-height: 1em;
+  font-size: 15px !important;
+  line-height: 1.2em;
   color: #F2FBFB;
   font-family: "Satoshi-Light";
 }
 .horizontal-line {
   border: none; /* Remove default border */
-  border-top: 1px solid #F2FBFB; /* Add a solid line on the top */
+  border-top: 1px solid #777777; /* Add a solid line on the top */
   margin: 20px 0; /* Adjust margin as needed */
   width: 100%;
 }
@@ -132,12 +132,49 @@ body {
   margin: 8px 0;
 }
 .footer-header {
-  // font-family: "Satoshi-Regular";
+  font-size: 15px !important;
+  font-family: "Satoshi-Regular";
 }
 
 .footer-bottom {
-  margin-top: 1em;
+  margin-top: 2em;
 }
+
+form input[type="text"],
+form input[type="email"],
+form input [type="name"] {
+    background-color: #001B1B;
+    border: none;
+    border-bottom: 1px solid #777;
+    color: #F2FBFB; /* Ensure text is visible on dark background */
+    padding: 5px 0px;
+    margin-bottom: 10px; /* Add space between inputs */
+}
+/* Hover effect for form inputs */
+form input[type="text"]:hover,
+form input[type="email"]:hover {
+    background-color: #002525; /* Slightly different color on hover */
+    color: #F2FBFB;
+}
+
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder {
+    color: #777;
+}
+
+form button {
+    background-color: #001B1B; /* Match button background with input fields */
+    color: #F2FBFB; /* Ensure button text is visible */
+    border: none; /* Remove default border */
+    padding: 5px;
+    cursor: pointer;
+}
+
+// form button:hover {
+//     background-color: #003333; /* Darker shade for hover effect */
+// }
+
 /* Homepage
 ***************************************************/
 
