@@ -9,7 +9,11 @@ body#collection-6669b17c28a22a7561e712f1{
   color: #001B1B;
 }
 
-.site-footer#collection-6669b17c28a22a7561e712f1 {
+#collection-6669b17c28a22a7561e712f1 .site-footer{
   background-color: #FF0000 !important; /* Red background color */
-  color: #FFFFFF
+  color: #FFFFFF;
+
+}
+#collection-6669b17c28a22a7561e712f1 .site-navigation a{
+  color: red;
 }
