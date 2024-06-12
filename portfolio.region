@@ -1,4 +1,4 @@
-!doctype html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,12 +17,16 @@
 
       </header>
       <div class=custom-container>
-        <h1 class="page-header"> kuwona portfolio
+        <h1 class="portfolio-header"> kuwona portfolio
         </h1>
-        <p>explore our ventures
-        </p>
-        
+        <h2 class="portfolio-subheader">explore our ventures
+        </h2>
+          <div portfolio-item-1>
 
+          </div>
+          <div portfolio-item-2>
+
+          </div>
       </div>
       <!--Footer with open block field -->
       <footer class="site-footer">
