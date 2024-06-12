@@ -16,13 +16,13 @@
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-
+      <div clas=custom-container>
         <h1 class="custom-header"> empowering ideas that
             heal humanity
             and transcend industry boundaries.
         </h1>
         <a href="/portfolio" class="explore-link"> explore our ventures </a>
-      </main>
+      </div>
 
       <!--Footer with open block field -->
       <footer class="site-footer">
