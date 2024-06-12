@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,29 +17,12 @@
 
       </header>
       <div class=custom-container>
-        <h1 class="page-header"> about
+        <h1 class="page-header"> kuwona portfolio
         </h1>
-        <p>
-          At Kuwona Studios, we are guided by the belief that empowering the right ideas has the power to heal the world.
-          Driven by our core values of <span class="core-value">compassion</span>, <span class="core-value">integrity</span>,
-          <span class="core-value">boldness</span>, <span class="core-value">curiosity</span>, <span class="core-value">originality</span>
-          and <span class="core-value">sustainability</span>,
-          we strive to create and empower ventures across industries that embody these principles and reflect our vision of a better world.
-          Through our unwavering commitment, we aim to make a lasting impact that resonates for generations to come.
+        <p>explore our ventures
         </p>
-        <h2 class="page-subheader"> meet the founders <h2>
-        <p>
-        kuwona studios was founded in 2022 by the carolyne wamono and michael kleynhans.
-        Their unique blend of sensitivity, creativity, and analytical skills gives them an extraordinary ability to see the unseen.
+        
 
-        With diverse backgrounds in modelling, construction, advertising & marketing, and software engineering to name a few,
-        carolyne and michael's shared passion for positive change led them to establish kuwona studios. united by their love for humanity,
-        they aim to foster collaborations and true partnerships with other innovative minds to build an array of businesses and projects that create a lasting,
-        positive impact on the world.
-        leveraging their expertise, michael and carolyne are committed to shaping companies that resonate with the ever-evolving needs of the present and future.
-        their distinctive perspectives and relentless dedication to making the world a better place serve as the driving force behind Kuwona Studios' diverse and impactful portfolio of ventures.
-        striive for nothing less than excellence
-        <a href="/portfolio" class="explore-link"> explore our ventures </a>
       </div>
       <!--Footer with open block field -->
       <footer class="site-footer">
