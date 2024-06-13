@@ -11,15 +11,18 @@
 
     <div class="site-container">
 
-      <header class="site-header">
+      <header class="insight-header">
         <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-      <div clas=custom-container>
-        <h1 class="custom-header"> access strategic insights inside kuwona
-        </h1>
-        <h2> coming soon  </h2>
+      <div clas="custom-container">
+        <div class="insight container">
+          <h1 class="custom-header"> access strategic insights inside kuwona
+          </h1>
+          <h2> coming soon
+          </h2>
+        </div>
       </div>
 
       <!--Footer with open block field -->
