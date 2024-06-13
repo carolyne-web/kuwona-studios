@@ -23,7 +23,12 @@
         {.end}
       </header>
 
-      <!-- cms content injection point -->
+        <!-- cms content injection point -->
+      <main class="content-container" role="main" data-content-field="main-content">
+       {squarespace.main-content}
+       test
+      </main>
+
       <div class="custom-container">
         <h1 class="custom-header">we'd love to hear from you</h1>
         <form action="mailto:carolyne@kuwonastudios.com" method="post" enctype="text/plain">
