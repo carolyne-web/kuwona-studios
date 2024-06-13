@@ -27,9 +27,10 @@
       <main class="content-container" role="main" data-content-field="main-content">
         <div class="custom-container">
           <h1 class="custom-header">we'd love to hear from you</h1>
-        </div>
        {squarespace.main-content}
+        </div>
       </main>
+
 
       <!--Footer with open block field -->
       <footer class="site-footer">
