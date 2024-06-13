@@ -21,13 +21,24 @@
         </h1>
         <h2 class="portfolio-subheader">explore our ventures
         </h2>
-          <div portfolio-item-1>
-
-          </div>
-          <div portfolio-item-2>
-
-          </div>
-      </div>
+              <div class="portfolio-list">
+                <div class="portfolio-item">
+                    <h2 class="portfolio-number">01</h2>
+                    <div class="details">
+                        <h2 class="venture-name"> kuwona digital solutions & marketing consultancy </h2>
+                        <p class="description">crafting thoughtful, tailored strategies that harmonise data-driven insights with human-centred approaches,
+                        we ensure accuracy, completeness, and sustainable results. </p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <h2 class="portfolio-number">02</h2>
+                    <div class="details">
+                        <h2 class="venture-name">kuwona online bookstore</h2>
+                        <p class="description">coming soon</p>
+                    </div>
+                </div>
+              </div>
+        </div>
       <!--Footer with open block field -->
       <footer class="site-footer">
           <hr class="horizontal-line">
