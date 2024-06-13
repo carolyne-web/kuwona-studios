@@ -16,7 +16,7 @@
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-      <div clas=custom-container>
+      <div class="custom-container">
         <h1 class="custom-header"> empowering ideas that
             heal humanity
             and transcend industry boundaries.

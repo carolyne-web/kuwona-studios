@@ -16,7 +16,7 @@
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-      <div class=custom-container>
+      <div class="custom-container">
         <h1 class="page-header"> about
         </h1>
         <p>
