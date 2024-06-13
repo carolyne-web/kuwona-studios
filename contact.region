@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- include system scripts, page meta, and header code injection -->
+    {squarespace-headers}
+  </head>
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+
+    <div class="site-container">
+
+      <header class="site-header">
+        <!-- site navigation -->
+        <squarespace:navigation navigationId="siteNav" template="site-navigation" />
+
+        <!-- site title or logo -->
+        {.section website}
+          <h1 class="site-title-heading" data-content-field="site-title">
+            <a href="/" class="site-title-link">{siteTitle}</a>
+          </h1>
+        {.end}
+      </header>
+
+      <!-- cms content injection point -->
+      <div class="custom-container">
+        <h1 class="custom-header">we'd love to hear from you</h1>
+        <form action="mailto:carolyne@kuwonastudios.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+      <!--Footer with open block field -->
+      <footer class="site-footer">
+          <hr class="horizontal-line">
+          <div class="footer-container">
+            <div class="newsletter">
+              <h3 class=footer-header>newsletter</h3>
+                <p>subscribe for insights</p>
+              <form>
+                <input type="text" placeholder="name" required>
+                <input type="email" placeholder="email" required>
+                <button type="submit">submit</button>
+              </form>
+            </div>
+            <div class="follow">
+              <h3 class=footer-header>follow</h3>
+              <ul>
+                <li>instagram</li>
+                <li>x</li>
+                <li>tiktok</li>
+              </ul>
+            </div>
+            <div class="legal">
+              <h3 class=footer-header>legal</h3>
+              <ul>
+                <li>privacy policy</li>
+                <li>terms & conditions</li>
+              </ul>
+            </div>
+          </div>
+    <div class="footer-bottom">
+      © kuwona studios 2024
+    </div>
+  </div>
+        <squarespace:block-field id="footerBlocks" columns="12" />
+      </footer>
+
+    </div>
+
+    <!-- combo and minify scripts when not logged in -->
+    <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+
+    <!-- other scripts, and footer code injection -->
+    {squarespace-footers}
+
+  </body>
+</html>
