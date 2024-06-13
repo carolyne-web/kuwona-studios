@@ -25,10 +25,10 @@
 
         <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">
-       {squarespace.main-content}
-       <div class="custom-container">
+        <div class="custom-container">
           <h1 class="custom-header">we'd love to hear from you</h1>
         </div>
+       {squarespace.main-content}
       </main>
 
       <!--Footer with open block field -->
