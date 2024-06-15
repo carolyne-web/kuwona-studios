@@ -149,8 +149,21 @@ form input [type="name"] {
     color: #F2FBFB; /* Ensure text is visible on dark background */
     padding: 5px 0px;
     margin-bottom: 10px; /* Add space between inputs */
-    width: 200px;
 }
+
+.footer-form input[type="text"],
+.footer-form input[type="email"],
+.footer-form form input [type="name"]{
+  background-color: #001B1B;
+  border: none;
+  border-bottom: 1px solid #777;
+  color: #F2FBFB; /* Ensure text is visible on dark background */
+  padding: 5px 0px;
+  margin-bottom: 10px; /* Add space between inputs */
+  width: 200px;
+}
+
+
 /* Hover effect for form inputs */
 form input[type="text"]:hover,
 form input[type="email"]:hover {
@@ -196,10 +209,9 @@ body.homepage {
 }
 .explore-link {
   color:#F2FBFB;
-  font-family: Satoshi-LightItalic;
+  font-family: Satoshi-Light;
   font-weight: 300;
   font-size: 19px;
-  font-style: italic;
 }
 /* Blog list
 ***************************************************/

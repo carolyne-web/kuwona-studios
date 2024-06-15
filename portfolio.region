@@ -46,7 +46,7 @@
             <div class="newsletter">
               <h3 class=footer-header>newsletter</h3>
                 <p>subscribe for insights</p>
-              <form>
+              <form class="footer-form">
                 <input type="text" placeholder="name" required>
                 <input type="email" placeholder="email" required>
                 <button type="submit">→</button>
