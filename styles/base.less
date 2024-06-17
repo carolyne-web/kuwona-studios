@@ -6,11 +6,26 @@
 
 /* General syles
 ***************************************************/
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('../assets/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url('../assets/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
 
 body {
-  font-family: "Satoshi-Light";
+  font-family: 'Satoshi-Variable';
   font-size: 100%;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .site-container {
@@ -25,7 +40,7 @@ body {
   h1, h2, h3 {
     font-weight: 300;
     line-height: 1.2em;
-    font-family: "Satoshi-Light";
+    font-family: 'Satoshi-Variable';
   }
 
   a {
@@ -197,19 +212,20 @@ body.homepage {
 }
 
 .custom-container {
-  height: 100dvh;
+  height: 80vh;
 }
 
 
 .custom-header {
-  font-size: 6.25rem;
+  font-size: 8vw;
   margin-bottom: 30px !important;
-  font-weight: 300;
   color: #777777;
+  font-family: 'Satoshi-Variable';
+  font-weight: 300;
 }
 .explore-link {
   color:#F2FBFB;
-  font-family: Satoshi-Light;
+  font-family: "Satoshi-Light";
   font-weight: 300;
   font-size: 19px;
 }
