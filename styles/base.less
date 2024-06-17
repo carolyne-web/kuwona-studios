@@ -155,8 +155,7 @@ body {
 }
 
 form input[type="text"],
-form input[type="email"],
-form input [type="name"] {
+form input[type="email"] {
     background-color: #001B1B;
     border: none;
     border-bottom: 1px solid #777;
@@ -166,17 +165,15 @@ form input [type="name"] {
 }
 
 .footer-form input[type="text"],
-.footer-form input[type="email"],
-.footer-form form input [type="name"]{
-  background-color: #001B1B;
-  border: none;
-  border-bottom: 1px solid #777;
-  color: #F2FBFB; /* Ensure text is visible on dark background */
-  padding: 5px 0px;
-  margin-bottom: 10px; /* Add space between inputs */
-  width: 200px;
+.footer-form input[type="email"] {
+    background-color: #001B1B;
+    border: none;
+    border-bottom: 1px solid #777;
+    color: #F2FBFB;
+    padding: 5px 0px;
+    margin-bottom: 10px; /* Add space between inputs */
+    width: 200px !important;
 }
-
 
 /* Hover effect for form inputs */
 form input[type="text"]:hover,
@@ -211,7 +208,7 @@ body.homepage {
 }
 
 .custom-container {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -250,11 +247,7 @@ body.collection-type-blog.view-list {
   @import 'sqs-grid-breaker';
 }
 
-/* about page
-***************************************************/
-body#collection-66698f5fbe689f718032a275 {
-  background-color: #001B1B;
-}
+
 
 /* global styles */
 .page-header {
