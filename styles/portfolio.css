@@ -55,7 +55,7 @@ margin-right: 10px;
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],
 #collection-6669b17c28a22a7561e712f1 form input[type="email"],
 #collection-6669b17c28a22a7561e712f1 form input[type="name"] {
-    background-color:#BFC6C6;
+    background-color:#F2FBFB;
     border: none;
     border-bottom: 1px solid #728181;
     color: #001B1B; /* Ensure text is visible on dark background */
@@ -64,5 +64,5 @@ margin-right: 10px;
 }
 
 #collection-6669b17c28a22a7561e712f1 .site-navigation-item a:hover {
-  border-bottom: 1px solid #728181;
+  border-bottom: 2px solid #728181;
 }
