@@ -16,9 +16,17 @@ margin: 3rem 0;
 
 .about-intro-section {
   height: 80vh;
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
 }
 
 .about-founders-section {
   height: 80vh;
+}
+
+.about-founder-intro {
+  font-size: 3rem;
+  line-height: 1em;
+  font-weight: 300 !important;
+  margin-top: 0;
+  color: #F2FBFB !important;
 }
