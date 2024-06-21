@@ -1,20 +1,20 @@
 body#collection-6669b17c28a22a7561e712f1{
-  background-color: #F2FBFB;
+  background-color: #BFC6C6;
 }
 
 .portfolio-header {
-  font-size: 6.25rem;
+  font-size: 4rem;
   margin-bottom: 30px;
   font-weight: 300;
   color: #001B1B;
 }
 
 #collection-6669b17c28a22a7561e712f1 .site-footer{
-  color: #777;
+  color: #001B1B;
 
 }
 #collection-6669b17c28a22a7561e712f1 .site-navigation a{
-  color: #777;
+  color: #001B1B;
 }
 
 #collection-6669b17c28a22a7561e712f1 h2{
@@ -24,7 +24,7 @@ body#collection-6669b17c28a22a7561e712f1{
 }
 
 #collection-6669b17c28a22a7561e712f1 p {
-  color: #777;
+  color: #728181;
 }
 
 .portfolio-item {
@@ -41,19 +41,28 @@ margin-right: 10px;
 }
 
 .venture-name {
+  /* font-weight: 400; */
   font-family: "Satoshi-Variable";
           a {
             color: #001B1B;
           }
 }
 
+.venture-name:hover {
+  font-weight: 400;
+}
+
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],
 #collection-6669b17c28a22a7561e712f1 form input[type="email"],
 #collection-6669b17c28a22a7561e712f1 form input[type="name"] {
-    background-color:#F2FBFB;
+    background-color:#BFC6C6;
     border: none;
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid #728181;
     color: #001B1B; /* Ensure text is visible on dark background */
     padding: 5px 0px;
     margin-bottom: 10px; /* Add space between inputs */
+}
+
+#collection-6669b17c28a22a7561e712f1 .site-navigation-item a:hover {
+  border-bottom: 1px solid #728181;
 }

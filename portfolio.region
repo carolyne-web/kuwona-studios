@@ -17,10 +17,8 @@
 
       </header>
       <div class=custom-container>
-        <h1 class="portfolio-header"> kuwona portfolio
+        <h1 class="portfolio-header"> kuwona ventures span diverse industries, delivering impactful solutions rooted in purpose and values.
         </h1>
-        <h2 class="portfolio-subheader">explore our ventures
-        </h2>
               <div class="portfolio-list">
                 <div class="portfolio-item">
                     <h2 class="portfolio-number">01</h2>
@@ -45,7 +43,6 @@
           <div class="footer-container">
             <div class="newsletter">
               <h3 class=footer-header>newsletter</h3>
-                <p>subscribe for insights</p>
               <form class="footer-form">
                 <input type="text" placeholder="name" required>
                 <input type="email" placeholder="email" required>
