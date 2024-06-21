@@ -5,9 +5,11 @@ body#collection-66698f5fbe689f718032a275 {
 }
 
 #collection-66698f5fbe689f718032a275 p {
-  color: #777;
+  color: #bfc6c6;
   font-family: "Satoshi-Variable";
   font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
 
 #collection-66698f5fbe689f718032a275 h1 {
@@ -25,9 +27,12 @@ margin: 3rem 0;
 }
 
 .about-founder-intro {
-  font-size: 3rem;
-  line-height: 1em;
-  font-weight: 300 !important;
+  font-size: 2rem !important;
+  line-height: 1em !important;
   margin-top: 0;
-  color: #F2FBFB !important;
+}
+
+b {
+  opacity: 0.5;
+  color: #bfc6c6;
 }

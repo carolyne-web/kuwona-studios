@@ -41,8 +41,10 @@ margin-right: 10px;
 }
 
 .venture-name {
-  font-family: "Satoshi-Regular";
-
+  font-family: "Satoshi-Variable";
+          a {
+            color: #001B1B;
+          }
 }
 
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],

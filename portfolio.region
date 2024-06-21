@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- include system scripts, page meta, and header code injection -->
+    {squarespace-headers}
+  </head>
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+
+    <div class="site-container">
+
+      <header class="site-header">
+        <!-- site navigation -->
+        <squarespace:navigation navigationId="siteNav" template="site-navigation" />
+
+      </header>
+      <div class=custom-container>
+        <h1 class="portfolio-header"> kuwona portfolio
+        </h1>
+        <h2 class="portfolio-subheader">explore our ventures
+        </h2>
+              <div class="portfolio-list">
+                <div class="portfolio-item">
+                    <h2 class="portfolio-number">01</h2>
+                    <div class="details">
+                        <h2 class="venture-name"><a href="/portfolio/kuwona-digital">kuwona digital solutions & marketing consultancy</a></h2>
+                        <p class="description">crafting thoughtful, tailored strategies that harmonise data-driven insights with human-centred approaches,
+                        we ensure accuracy, completeness, and sustainable results. </p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <h2 class="portfolio-number">02</h2>
+                    <div class="details">
+                        <h2 class="venture-name">kuwona online bookstore</h2>
+                        <p class="description">coming soon</p>
+                    </div>
+                </div>
+              </div>
+        </div>
+      <!--Footer with open block field -->
+      <footer class="site-footer">
+          <hr class="horizontal-line">
+          <div class="footer-container">
+            <div class="newsletter">
+              <h3 class=footer-header>newsletter</h3>
+                <p>subscribe for insights</p>
+              <form class="footer-form">
+                <input type="text" placeholder="name" required>
+                <input type="email" placeholder="email" required>
+                <button type="submit">→</button>
+              </form>
+            </div>
+            <div class="follow">
+              <h3 class=footer-header>follow</h3>
+              <ul>
+                <li>instagram</li>
+                <li>x</li>
+              </ul>
+            </div>
+            <div class="legal">
+              <h3 class=footer-header>legal</h3>
+              <ul>
+                <li>privacy policy</li>
+                <li>terms & conditions</li>
+              </ul>
+            </div>
+          </div>
+    <div class="footer-bottom">
+      © kuwona studios 2024
+    </div>
+  </div>
+        <squarespace:block-field id="footerBlocks" columns="12" />
+      </footer>
+
+    </div>
+
+    <!-- combo and minify scripts when not logged in -->
+    <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+
+    <!-- other scripts, and footer code injection -->
+    {squarespace-footers}
+
+  </body>
+</html>

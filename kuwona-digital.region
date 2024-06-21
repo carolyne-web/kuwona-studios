@@ -16,36 +16,29 @@
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-      <div class=custom-container>
-        <h1 class="portfolio-header"> kuwona portfolio
+      <div class="venture-container">
+        <h1 class="venture-header"> Crafting thoughtful, tailored strategies that harmonize data-driven insights with
+        creative human-centered approaches, we ensure accuracy, completeness, and sustainable results.
         </h1>
-        <h2 class="portfolio-subheader">explore our ventures
-        </h2>
-              <div class="portfolio-list">
-                <div class="portfolio-item">
-                    <h2 class="portfolio-number">01</h2>
-                    <div class="details">
-                        <h2 class="venture-name"> kuwona digital solutions & marketing consultancy </h2>
-                        <p class="description">crafting thoughtful, tailored strategies that harmonise data-driven insights with human-centred approaches,
-                        we ensure accuracy, completeness, and sustainable results. </p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <h2 class="portfolio-number">02</h2>
-                    <div class="details">
-                        <h2 class="venture-name">kuwona online bookstore</h2>
-                        <p class="description">coming soon</p>
-                    </div>
-                </div>
-              </div>
-        </div>
+        <p>
+        We specialise in helping brands, big and small, distinguish themselves in today’s highly saturated market, and
+        make it easier for them to navigate the complexities of the digital landscape. Our goal is simple: to make your
+        brand memorable, recognizable, profitable, and impactful.
+        </p>
+        <p>With our expert guidance and personalised approach, you'll gain the clarity and confidence needed to achieve
+        your marketing and digital objectives. Trust our consultancy to be the extra eye that sees what others miss and the
+        partner that helps you shine in a crowded marketplace.
+        </p>
+        <p> services: web design & development / branding / digital marketing / animation / photography & videography
+        </p>
+      </div>
+
       <!--Footer with open block field -->
       <footer class="site-footer">
           <hr class="horizontal-line">
           <div class="footer-container">
             <div class="newsletter">
-              <h3 class=footer-header>newsletter</h3>
-                <p>subscribe for insights</p>
+              <h3 class=footer-header>subscribe to our newsletter for insights</h3>
               <form class="footer-form">
                 <input type="text" placeholder="name" required>
                 <input type="email" placeholder="email" required>

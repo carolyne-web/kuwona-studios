@@ -1,0 +1,28 @@
+body#collection-66757d0dcb3bd378d782c59c{
+  background-color: #F2FBFB;
+}
+
+.venture-header {
+  color: #001b1b;
+}
+#collection-66757d0dcb3bd378d782c59c p {
+  color: #001b1b;
+}
+
+
+#collection-66757d0dcb3bd378d782c59c .site-footer{
+  color: #777;
+
+}
+
+#collection-66757d0dcb3bd378d782c59c .site-navigation a{
+  color: #777;
+}
+
+.venture-container {
+  min-height: 80vh;
+}
+
+#collection-66757d0dcb3bd378d782c59c .site-navigation-item a:hover {
+  border-bottom: 1px solid #777;
+}
