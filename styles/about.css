@@ -6,4 +6,14 @@ body#collection-66698f5fbe689f718032a275 {
 
 #collection-66698f5fbe689f718032a275 p {
   color: #777;
+  font-family: "Satoshi-Variable";
+  font-weight: 400;
+}
+
+.about-intro-section {
+  height: 80vh;
+}
+
+.about-founders-section {
+  height: 80vh;
 }

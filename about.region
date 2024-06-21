@@ -16,18 +16,19 @@
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-      <div class="custom-container">
+      <div class="about-intro-section">
         <h1 class="page-header"> we dare you to believe in a better world—a world where empowering ideas drive positive change,
         heal communities, and foster a culture that cares.
         </h1>
         <p>
-        driven by our core values of <b>curiosity</b>, <b>originality</b> and <b>boldness</b>, meets
+        driven by our core values of <b>curiosity</b>, <b>boldness</b> and <b>originality</b>, meets
         <b>compassion</b>, <b>integrity</b> and <b>sustainability</b>, we strive to create and empower ventures across
         industries that embody these principles
         and reflect our vision of a better world.
         <br>our mission is to make a lasting impact that resonates for generations to come.
         </p>
-
+      </div>
+      <div class ="about-founders-section">
         <h2 class="page-subheader"> meet the founders <h2>
         <p>their unique blend of sensitivity and creativity, both logical and analytical, allows them to
         see the unseen.</p>
