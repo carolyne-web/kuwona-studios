@@ -15,9 +15,10 @@ margin: 3rem 0;
 }
 
 .about-intro-section {
-  height: 80%;
+  height: 80vw;
+  margin-bottom: 5vw;
 }
 
 .about-founders-section {
-  height: fit-content;
+  height: 80vw;
 }
