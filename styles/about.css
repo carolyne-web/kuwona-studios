@@ -30,9 +30,14 @@ margin: 3rem 0;
   font-size: 2rem !important;
   line-height: 1em !important;
   margin-top: 0;
+  font-weight: 300 !important;
 }
 
 b {
   opacity: 0.5;
   color: #bfc6c6;
+}
+
+.contact-link a {
+  color: #728181;
 }
