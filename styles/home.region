@@ -46,7 +46,7 @@
               <h3 class=footer-header>legal</h3>
               <ul>
                 <li>privacy policy</li>
-                <li>terms & conditions</li>
+                <li><a href="/terms">terms & conditions</a></li>
               </ul>
             </div>
           </div>
