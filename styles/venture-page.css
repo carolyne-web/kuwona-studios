@@ -36,3 +36,14 @@ body#collection-66757d0dcb3bd378d782c59c{
   font-weight: bold; /* Make it bold when 'bold' class is added */
   transition: font-weight 3s ease; /* Maintain the same transition as normal font-weight */
 }
+
+#collection-66757d0dcb3bd378d782c59c form input[type="text"],
+#collection-66757d0dcb3bd378d782c59c form input[type="email"],
+#collection-66757d0dcb3bd378d782c59c form input[type="name"] {
+    background-color:#F2FBFB;
+    border: none;
+    border-bottom: 1px solid #728181;
+    color: #001B1B; /* Ensure text is visible on dark background */
+    padding: 5px 0px;
+    margin-bottom: 10px; /* Add space between inputs */
+}
