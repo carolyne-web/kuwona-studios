@@ -21,17 +21,38 @@
         </h1>
               <div class="portfolio-list">
                 <div class="portfolio-item">
-                    <h2 class="portfolio-number">01</h2>
+                    <h2 class="portfolio-number">01
+                    </h2>
                     <div class="details">
-                        <h2 class="venture-name"><a href="/portfolio/kuwona-digital">kuwona digital solutions & marketing consultancy</a></h2>
+                        <h2>
+                          <a href="/portfolio/kuwona-digital">
+                            <span class="venture-name">kuwona digital</span><br>
+                            <span class="venture-type">digital solutions & marketing consultancy</span>
+                          </a>
+                        </h2>
                         <p class="description">crafting thoughtful, tailored strategies that harmonise data-driven insights with human-centred approaches,
                         we ensure accuracy, completeness, and sustainable results. </p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <h2 class="portfolio-number">02</h2>
+                    <h2 class="portfolio-number">02
+                    </h2>
                     <div class="details">
-                        <h2 class="venture-name">kuwona online bookstore</h2>
+                    <h2>
+                        <span class="venture-name">parabl</span><br>
+                        <span class="venture-type">online bookstore</span>
+                    </h2>
+                        <p class="description">coming soon</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <h2 class="portfolio-number">03
+                    </h2>
+                    <div class="details">
+                    <h2>
+                        <span class="venture-name">my community my people</span><br>
+                        <span class="venture-type">a community-powered platform that connects people, ideas, and resources for social change</span>
+                    </h2>
                         <p class="description">coming soon</p>
                     </div>
                 </div>

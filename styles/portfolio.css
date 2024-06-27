@@ -29,10 +29,12 @@ body#collection-6669b17c28a22a7561e712f1{
 
 .portfolio-item {
   display: flex;
+  align-items: baseline;
 }
 
 .portfolio-number {
 margin-right: 10px;
+font-size: 1.3rem;
 }
 
 .site-container .portfolio-list {
@@ -43,14 +45,19 @@ margin-right: 10px;
 .venture-name {
   /* font-weight: 400; */
   font-family: "Satoshi-Variable";
-          a {
-            color: #001B1B;
-          }
+  color: #001B1B;
+  font-size: 1.3rem;
+
 }
 
-.venture-name:hover {
-  font-weight: 400;
+.venture-type {
+  color: #728181;
+  font-size: 1.3rem;
 }
+
+/* .venture-name:hover {
+  font-weight: bold;
+} */
 
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],
 #collection-6669b17c28a22a7561e712f1 form input[type="email"],
