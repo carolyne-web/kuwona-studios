@@ -4,6 +4,7 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 .venture-header {
   color: #001B1B;
+  font-size: 4rem;
 }
 #collection-66757d0dcb3bd378d782c59c p {
   color: #001B1B;
@@ -25,4 +26,13 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 #collection-66757d0dcb3bd378d782c59c .site-navigation-item a:hover {
   border-bottom: 1px solid #777;
+}
+
+.bird {
+  font-weight: 300; /* Start with normal font weight */
+}
+
+.bird.bold {
+  font-weight: bold; /* Make it bold when 'bold' class is added */
+  transition: font-weight 3s ease; /* Maintain the same transition as normal font-weight */
 }
