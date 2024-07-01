@@ -35,7 +35,7 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 .bird.bold {
   font-weight: 500; /* Make it bold when 'bold' class is added */
-  transition: font-weight 3s ease; /* Maintain the same transition as normal font-weight */
+  transition: font-weight 0.5s ease; /* Maintain the same transition as normal font-weight */
   opacity: 0.5;
 }
 
