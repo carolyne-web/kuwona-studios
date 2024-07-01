@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   transformNextWord();
 
   // Transform words sequentially every 1 second (adjust as needed)
-  setInterval(transformNextWord, 300); // 1000ms = 1 second
+  setInterval(transformNextWord, 500); // 1000ms = 1 second
 });
 
 
