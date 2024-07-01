@@ -269,12 +269,51 @@ body.homepage {
   font-family: 'Satoshi-Variable';
   font-weight: 300;
 }
+
+@main-color: #263D3D;
+
 .explore-link {
-  color:#F2FBFB;
   font-family: "Satoshi-Variable";
   font-weight: 300;
   font-size: 19px;
+  padding: 5px 0;
+  position: relative; /* Create a new positioning context */
+  z-index: 1; /* Ensure the text is above the pseudo-element */
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-background-clip: text; /* Webkit-specific property */
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    @main-color,
+    @main-color 50%,
+    #F2FBFB 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 1px; /* Adjust the height for a thinner underline */
+    left: 0;
+    bottom: -3px;
+    position: absolute; /* Position it relative to .explore-link */
+    z-index: 0; /* Ensure the underline stays behind the text */
+    background: @main-color;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-position: 0%;
+
+    &:before {
+      width: 100%;
+    }
+  }
 }
+
 /* Blog list
 ***************************************************/
 
