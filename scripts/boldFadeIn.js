@@ -14,11 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function handleVisibility() {
     birdElements.forEach(function(bird) {
       if (isInViewport(bird) && !bird.classList.contains('bold')) {
-        bird.style.transition = 'font-weight 3s ease'; // Apply transition when becoming bold
+        bird.style.transition = 'font-weight 0.5s ease'; // Adjust transition as needed
         bird.style.fontWeight = '500'; // Immediately change to bold
-        setTimeout(function() {
-          bird.classList.add('bold');
-        }, 1000 * index); // Delay adding the 'bold' class
+        bird.classList.add('bold');
+        return; // Exit the loop after the first word is transformed
       }
     });
   }
