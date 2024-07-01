@@ -18,7 +18,7 @@ const birdElements = document.querySelectorAll('.bird');
         bird.style.fontWeight = '500'; // Immediately change to bold
         setTimeout(function() {
           bird.classList.add('bold');
-        }, 1000 * index); // Delay adding the 'bold' class
+        }, 1000); // Delay adding the 'bold' class
       }
     });
   }
