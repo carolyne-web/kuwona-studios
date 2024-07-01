@@ -90,15 +90,58 @@ body {
     margin-left: 1em;
   }
 
-  a {
-    color: #F2FBFB;
-    text-decoration: none;
 
+  @main-color: #263D3D;
+
+  a {
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      @main-color,
+      @main-color 50%,
+      #F2FBFB 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: all 0.3s ease-in-out;
+    &:before {
+      display: block;
+      content: '';
+      width: 0;
+      height: 3px;
+      bottom: 5px;
+      left: 0;
+      bottom: -3px;
+      z-index: 0;
+      position: absolute;
+      background: @main-color;
+      transition: all 0.3s ease-in-out;
+    }
     &:hover {
-      color: #F2FBFB;
-      border-bottom: 1px solid #F2FBFB;
+      background-position: 0%;
+      &:before {
+        width: 100%;
+      }
     }
   }
+
+}
+
+
+
+  // // a {
+  // //   color: #F2FBFB;
+  // //   text-decoration: none;
+
+  //   &:hover {
+  //     color: #F2FBFB;
+  //     border-bottom: 1px solid #F2FBFB;
+  //   }
+  // }
 
   &.active-link > a {
     color: #999;
