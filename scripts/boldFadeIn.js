@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     birdElements.forEach(function(bird) {
       if (isInViewport(bird) && !bird.classList.contains('bold')) {
         bird.style.transition = 'font-weight 3s ease'; // Apply transition when becoming bold
-        bird.style.fontWeight = 'bold'; // Immediately change to bold
+        bird.style.fontWeight = '500'; // Immediately change to bold
         setTimeout(function() {
           bird.classList.add('bold');
         }, 1000); // Delay adding the 'bold' class
