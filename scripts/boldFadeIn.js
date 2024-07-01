@@ -14,11 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function handleVisibility() {
     birdElements.forEach(function(bird) {
       if (isInViewport(bird) && !bird.classList.contains('bold')) {
-        bird.style.transition = 'font-weight 3s ease'; // Apply transition when becoming bold
-        bird.style.fontWeight = '500'; // Immediately change to bold
-        setTimeout(function() {
-          bird.classList.add('bold');
-        }, 1000); // Delay adding the 'bold' class
+        bird.style.transition = 'opacity 0.5s ease'; // Apply transition when changing opacity
+        bird.style.opacity = '0.5'; // Set opacity to 0.5
+        bird.style.fontWeight = '500'; // Ensure font weight is bold
+        bird.classList.add('bold'); // Add the 'bold' class immediately
       }
     });
   }
