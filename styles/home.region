@@ -17,8 +17,11 @@
 
       </header>
       <div class="custom-container">
-        <h1 class="custom-header"> empowering <span class="bird">ideas</span> to heal <span class="bird">humanity</span>
-        and <span class="bird">transcend</span> industry <span class="bird">boundaries.</span>
+        <h1 class="custom-header">
+          <span class="bird">empowering</span> ideas to heal
+          <span class="bird">humanity</span> and
+          <span class="bird">transcend</span> industry
+          boundaries.
         </h1>
         <a href="/portfolio" class="explore-link"> explore our ventures </a>
       </div>
