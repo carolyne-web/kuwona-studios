@@ -30,14 +30,14 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 .bird {
   font-weight: 300; /* Start with normal font weight */
-  transition: font-weight 0.5s ease, opacity 3s ease;
+  transition: font-weight 0.5s ease, opacity 3s ease; /* Transition for font-weight and opacity change */
 }
 
 .bird.bold {
   font-weight: 500; /* Make it bold when 'bold' class is added */
-  transition: font-weight 3s ease, opacity 3s ease; /* Maintain the same transition as normal font-weight */
-  opacity: 0.5;
+  opacity: 0.5; /* Set initial opacity */
 }
+
 
 #collection-66757d0dcb3bd378d782c59c form input[type="text"],
 #collection-66757d0dcb3bd378d782c59c form input[type="email"],
