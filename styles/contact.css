@@ -19,7 +19,7 @@ body#collection-666af37c8650031532ebdd80 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3vw;
+  padding-right: 3vw;
 }
 
 #textarea-yui_3_17_2_1_1718282318497_6218-field {
@@ -34,7 +34,7 @@ body#collection-666af37c8650031532ebdd80 {
 }
 
 #collection-666af37c8650031532ebdd80 h1 {
-  font-size: 4.5vw;
+  font-size: 4.5rem;
   color: #f2fbfb;
   font-family: 'Satoshi-Variable';
   font-weight: 300;
