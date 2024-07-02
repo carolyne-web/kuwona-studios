@@ -1,5 +1,5 @@
 <nav class="site-navigation">
-    <div class="logo">
+    <div id="logo">
         <a href="/">
           kuwona studios
         </a>
