@@ -38,7 +38,6 @@
           <div class="footer-container">
             <div class="newsletter">
               <h3 class=footer-header>newsletter</h3>
-                <p>subscribe for insights</p>
               <form class="footer-form">
                 <input type="text" placeholder="name" required>
                 <input type="email" placeholder="email" required>
@@ -55,8 +54,8 @@
             <div class="legal">
               <h3 class=footer-header>legal</h3>
               <ul>
-                <li>privacy policy</li>
-                <li>terms & conditions</li>
+                <li><a href="/privacy">privacy policy</a></li>
+                <li><a href="/terms">terms & conditions</a></li>
               </ul>
             </div>
           </div>
