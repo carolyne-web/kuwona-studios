@@ -1,6 +1,10 @@
 body#collection-666af37c8650031532ebdd80 {
   background-color: #001B1B;
 }
+
+.form-wrapper, .form-wrapper .form-inner-wrapper {
+  justify-content: flex-end;
+}
 /* .custom-container .site-container {
   width: 50%;
 } */
