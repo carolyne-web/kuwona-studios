@@ -11,8 +11,11 @@ body#collection-6669b17c28a22a7561e712f1{
 
 #collection-6669b17c28a22a7561e712f1 .site-footer{
   color: #001B1B;
-
 }
+#collection-6669b17c28a22a7561e712f1 .site-footer a {
+  color: #001B1B;
+}
+
 :root {
   --main-color: #596A6A;
 }
@@ -26,7 +29,7 @@ body#collection-6669b17c28a22a7561e712f1{
     to right,
     var(--main-color),
     var(--main-color) 50%,
-    red 50%
+    #001b1b 50%
   );
 }
 
