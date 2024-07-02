@@ -26,7 +26,7 @@
         <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">
         <div class="custom-container">
-          <h1 class="custom-header">we'd love to hear from you</h1>
+          {#  <h1 class="custom-header">we'd love to hear from you</h1>  }
        {squarespace.main-content}
         </div>
       </main>
