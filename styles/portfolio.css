@@ -90,3 +90,8 @@ font-size: 1.3rem;
 #collection-6669b17c28a22a7561e712f1 .site-navigation-item a:hover {
   border-bottom: 2px solid #728181;
 }
+
+#collection-6669b17c28a22a7561e712f1 .site-navigation #logo a:hover {
+  color: #001B1B !important;
+  opacity: 1;
+}
