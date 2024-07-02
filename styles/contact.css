@@ -12,3 +12,20 @@ body#collection-666af37c8650031532ebdd80 {
 #page-666af37c8650031532ebdd80 {
   margin-top: 7vw;
 }
+
+
+.contact-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3vw;
+}
+
+#textarea-yui_3_17_2_1_1718282318497_6218-field {
+  background-color: #001b1b;
+}
+
+.TC0a5swwrteZsfBY7ttl {
+  color: #f2fbfb;
+}
