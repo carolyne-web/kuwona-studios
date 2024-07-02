@@ -21,12 +21,12 @@
         </h1>
               <div class="portfolio-list">
                 <div class="portfolio-item">
-                    <h2 class="portfolio-number">01
+                    <h2 class="portfolio-number">
                     </h2>
                     <div class="details">
                         <h2>
                           <a href="/portfolio/kuwona-digital">
-                            <span class="venture-name">kuwona digital</span><br>
+                            <span class="venture-name">01 kuwona digital</span><br>
                           </a>
                             <span class="venture-type">digital solutions & marketing consultancy</span>
                         </h2>
