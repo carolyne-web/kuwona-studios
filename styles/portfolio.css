@@ -13,9 +13,23 @@ body#collection-6669b17c28a22a7561e712f1{
   color: #001B1B;
 
 }
-#collection-6669b17c28a22a7561e712f1 .site-navigation a{
-  color: #001B1B;
+:root {
+  --main-color: #596A6A;
 }
+
+#collection-6669b17c28a22a7561e712f1 .site-navigation a {
+  color: #001B1B;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-color) 50%,
+    red 50%
+  );
+}
+
 
 #collection-6669b17c28a22a7561e712f1 h2{
   color: #001B1B;
