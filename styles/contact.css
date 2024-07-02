@@ -34,4 +34,31 @@ body#collection-666af37c8650031532ebdd80 {
 
 #collection-666af37c8650031532ebdd80 h1 {
   font-size: 4.5vw;
+  color: #f2fbfb;
+}
+
+/* moving beam */
+.TC0a5swwrteZsfBY7ttl {
+  position: relative;
+  overflow: hidden; /* Ensures the beam stays within the box */
+}
+
+.TC0a5swwrteZsfBY7ttl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start position outside the box */
+  width: 100%;
+  height: 3px; /* Adjust height as needed */
+  background-color: #ffcc00; /* Beam color */
+  animation: moveBeam 5s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes moveBeam {
+  0% {
+      left: -100%; /* Start position */
+  }
+  100% {
+      left: 100%; /* End position */
+  }
 }
