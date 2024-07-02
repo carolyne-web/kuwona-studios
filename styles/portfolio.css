@@ -52,7 +52,7 @@ font-size: 1.3rem;
 }
 
 .venture-name:hover {
-  transform: scale(1.07); /* Scaling up the anchor text on hover */
+  font-size: 1.35rem; /* Scaling up the anchor text on hover */
   color: #001B1B;
 
 }
