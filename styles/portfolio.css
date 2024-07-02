@@ -19,9 +19,11 @@ body#collection-6669b17c28a22a7561e712f1{
 /* :root {
   --main-color: #596A6A;
 }
-
+*/
 #collection-6669b17c28a22a7561e712f1 .site-navigation a {
   color: #001B1B;
+}
+/*
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
