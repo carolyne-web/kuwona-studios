@@ -38,12 +38,12 @@ body#collection-666af37c8650031532ebdd80 {
 }
 
 /* moving beam */
-.TC0a5swwrteZsfBY7ttl {
+#textarea-yui_3_17_2_1_1718282318497_6218-field .TC0a5swwrteZsfBY7ttl {
   position: relative;
   overflow: hidden; /* Ensures the beam stays within the box */
 }
 
-.TC0a5swwrteZsfBY7ttl::before {
+#textarea-yui_3_17_2_1_1718282318497_6218-field .TC0a5swwrteZsfBY7ttl::before {
   content: "";
   position: absolute;
   top: 0;
