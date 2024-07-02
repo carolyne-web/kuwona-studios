@@ -49,6 +49,10 @@ body {
     &.disabled {
       color: #ccc;
     }
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
 
@@ -131,7 +135,7 @@ a {
     }
   }
 }
-
+}
 
   // a {
   //   color: #F2FBFB;
@@ -147,7 +151,7 @@ a {
   //   color: #999;
   //   border-bottom: 1px solid #F2FBFB;
   // }
-}
+
 
 // .active-link {
 //   border-bottom: 1px solid #F2FBFB !important;
@@ -245,6 +249,22 @@ form button {
 
 .form-submit-button {
   font-weight: 400 !important;
+  position: relative;
+}
+
+.form-submit-button::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: #596A6A;
+    transition: width .3s;
+}
+
+.form-submit-button:hover::after {
+    width: 100%;
 }
 // form button:hover {
 //     background-color: #003333; /* Darker shade for hover effect */

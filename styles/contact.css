@@ -26,6 +26,7 @@ body#collection-666af37c8650031532ebdd80 {
   background-color: #001b1b !important;
   color: #f2fbfb;
   border-radius: 6px;
+  position: relative;
 }
 
 .HZaN3pKtOB3UmeTg6_qU {
@@ -41,7 +42,7 @@ body#collection-666af37c8650031532ebdd80 {
 
 /* moving beam */
 
-#textarea-yui_3_17_2_1_1718282318497_6218-field .TC0a5swwrteZsfBY7ttl {
+#textarea-yui_3_17_2_1_1718282318497_6218-field::before {
   position: absolute;
   top: -50%;
   left: -50%;
