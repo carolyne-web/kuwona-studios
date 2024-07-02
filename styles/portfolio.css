@@ -47,12 +47,12 @@ font-size: 1.3rem;
   font-family: "Satoshi-Variable";
   color: #001B1B;
   font-size: 1.3rem;
-  /* display: inline-block; /* Ensures hover effect works correctly */
-  /* transition: all .2s ease-in-out; */
+  display: inline-block; /* Ensures hover effect works correctly */
+  transition: all .2s ease-in-out; */
 }
 
 .venture-name:hover {
-  color: #728181; /* Scaling up the anchor text on hover */
+  transform: scale(1.05); /* Scaling up the anchor text on hover */
 }
 
 .venture-type {
