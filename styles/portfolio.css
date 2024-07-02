@@ -47,17 +47,18 @@ font-size: 1.3rem;
   font-family: "Satoshi-Variable";
   color: #001B1B;
   font-size: 1.3rem;
+  /* display: inline-block; /* Ensures hover effect works correctly */
+  /* transition: all .2s ease-in-out; */
+}
 
+.venture-name:hover {
+  opacity: 0.5; /* Scaling up the anchor text on hover */
 }
 
 .venture-type {
   color: #728181;
   font-size: 1.3rem;
 }
-
-/* .venture-name:hover {
-  font-weight: bold;
-} */
 
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],
 #collection-6669b17c28a22a7561e712f1 form input[type="email"],
