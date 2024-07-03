@@ -18,14 +18,9 @@
       </header>
       <div class="about-intro-section">
       <h1 class="page-header">
-        <span class="bird">we dare you</span> to believe in a better world—a world where
-        <span class="bird">empowering ideas</span> drive <span class="bird">positive change</span>,
-        heal communities, and foster a <span class="bird">culture that cares</span>.
-      </h1>
-
-        {#  <h1 class="page-header"> we dare you to believe in a better world—a world where empowering ideas drive positive change,
+        <h1 class="page-header"> we dare you to believe in a better world—a world where empowering ideas drive positive change,
         heal communities, and foster a culture that cares.
-        </h1>  }
+        </h1>
         <p>
         driven by our core values of <b>curiosity</b>, <b>boldness</b> and <b>originality</b>, meets
         <b>compassion</b>, <b>integrity</b> and <b>sustainability</b>, we strive to create and empower ventures across

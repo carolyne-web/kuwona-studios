@@ -47,7 +47,7 @@ body#collection-66757d0dcb3bd378d782c59c{
 .bird {
   font-weight: 300; /* Start with normal font weight */
   opacity: 1;
-  transition: font-weight 1s ease, opacity 1s ease;
+  transition: font-weight 1s ease, opacity 1s ease-in;
   /* transition: font-weight 0.5s ease;
   transition: opacity 0.5s ease-in; */
 }
