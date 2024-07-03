@@ -17,6 +17,12 @@ body#collection-66757d0dcb3bd378d782c59c{
   );
 }
 
+
+#collection-66757d0dcb3bd378d782c59c .site-navigation #logo a:hover {
+  color: #001B1B !important;
+  opacity: 1;
+}
+
 .venture-header {
   color: #001B1B;
   font-size: 4rem;
