@@ -89,7 +89,7 @@ heal communities, and foster a <span class="bird">culture that cares</span>.
 
     <!-- combo and minify scripts when not logged in -->
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
-
+    <squarespace:script src="boldFadeIn.js" />
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
 
