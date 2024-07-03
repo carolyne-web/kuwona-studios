@@ -2,6 +2,21 @@ body#collection-66757d0dcb3bd378d782c59c{
   background-color: #F2FBFB;
 }
 
+:root {
+  --main-color: #596A6A;
+}
+#collection-66757d0dcb3bd378d782c59c.site-navigation a {
+  color: #001B1B;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-color) 50%,
+    #001b1b 50%
+  );
+}
+
 .venture-header {
   color: #001B1B;
   font-size: 4rem;
