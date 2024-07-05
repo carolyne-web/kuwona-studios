@@ -25,12 +25,12 @@
                     01
                     </h2>
                     <div class="details">
-                        <h2>
+                        <h2 class="venture-name"> kuwona digital
                           <a href="/portfolio/kuwona-digital">
-                            <span class="venture-name"> kuwona digital</span><br>
                           </a>
-                            <span class="venture-type">digital solutions & marketing consultancy</span>
                         </h2>
+                        <h3 class="venture-type">digital solutions & marketing consultancy
+                        </h3>
                         <p class="description">crafting thoughtful, tailored strategies that harmonise data-driven insights with human-centred approaches,
                         we ensure accuracy, completeness, and sustainable results. </p>
                     </div>
@@ -39,22 +39,22 @@
                     <h2 class="portfolio-number">02
                     </h2>
                     <div class="details">
-                    <h2>
-                        <span class="venture-name">parabl</span><br>
-                        <span class="venture-type">online bookstore</span>
-                    </h2>
-                        <p class="description">coming soon</p>
+                      <h2 class="venture-name">parabl
+                      </h2>
+                      <h3 class="venture-type">online bookstore
+                      </h3>
+                      <p class="description">coming soon</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <h2 class="portfolio-number">03
                     </h2>
                     <div class="details">
-                    <h2>
-                        <span class="venture-name">mycommunity mypeople</span><br>
-                        <span class="venture-type">a community-powered platform that connects people, ideas, and resources for social change</span>
+                    <h2 class="venture-name"> mycommunity mypeople
                     </h2>
-                        <p class="description">coming soon</p>
+                    <h3 class="venture-type">a community-powered platform that connects people, ideas, and resources for social change
+                    </h3>
+                    <p class="description">coming soon</p>
                     </div>
                 </div>
               </div>

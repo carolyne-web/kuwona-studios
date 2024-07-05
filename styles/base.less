@@ -137,9 +137,15 @@ form input[type="email"] {
     color: #F2FBFB;
     padding: 5px 0px;
     margin-bottom: 10px; /* Add space between inputs */
-    width: 200px !important;
+    width: 200px;
 }
-
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .footer-form input[type="text"],
+  .footer-form input[type="email"] {
+    width: 80%;
+  }
+}
 /* Hover effect for form inputs */
 form input[type="text"]:hover,
 form input[type="email"]:hover {

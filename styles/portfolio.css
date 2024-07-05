@@ -3,7 +3,7 @@ body#collection-6669b17c28a22a7561e712f1{
 }
 
 .portfolio-header {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 30px;
   font-weight: 300;
   color: #001B1B;
@@ -41,6 +41,10 @@ body#collection-6669b17c28a22a7561e712f1{
   color: #728181;
 }
 
+#collection-6669b17c28a22a7561e712f1 .menu-toggle {
+  color: #001B1B;
+}
+
 .portfolio-item {
   display: flex;
   align-items: baseline;
@@ -48,32 +52,40 @@ body#collection-6669b17c28a22a7561e712f1{
 
 .portfolio-number {
 margin-right: 10px;
-font-size: 1.3rem;
+font-size: clamp(1.2rem, 2.5vw, 1.8rem);
 }
 
 .site-container .portfolio-list {
   width: 50%;
   padding: 0;
 }
-
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .site-container .portfolio-list {
+    width: 100%;
+  }
+}
 .venture-name {
   /* font-weight: 400; */
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-family: "Satoshi-Variable";
   color: #001B1B;
-  font-size: 1.3rem;
   display: inline-block; /* Ensures hover effect works correctly */
   transition: all .2s ease-in-out;
 }
 
 .venture-name:hover {
-  font-size: 1.35rem; /* Scaling up the anchor text on hover */
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem); /* Scaling up the anchor text on hover */
   color: #001B1B;
 
 }
 
 .venture-type {
   color: #728181;
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin-bottom: 0;
+  margin-top: 10px;
+
 }
 
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],
