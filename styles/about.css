@@ -17,20 +17,17 @@ margin: 3rem 0;
 }
 
 .about-intro-section {
-  height: 80vh;
-  margin-bottom: 3vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .about-founders-section {
-  height: 80vh;
-  padding-bottom: 3vw;
-}
-
-.about-founder-intro {
-  font-size: 1.3rem !important;
-  line-height: 1em !important;
-  margin-top: 0;
-  font-weight: 400 !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 b {
@@ -40,4 +37,8 @@ b {
 
 .contact-link a {
   color: #728181;
+}
+
+.footer-container {
+  height: 100%;
 }

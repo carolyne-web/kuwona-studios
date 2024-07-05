@@ -17,7 +17,6 @@
 
       </header>
       <div class="about-intro-section">
-      <h1 class="page-header">
         <h1 class="page-header"> we dare you to believe in a better world—a world where empowering ideas drive positive change,
         heal communities, and foster a culture that cares.
         </h1>
@@ -30,9 +29,11 @@
         </p>
       </div>
       <div class ="about-founders-section">
-        <h2 class="page-subheader"> meet the founders <h2>
-        <p class="about-founder-intro">their unique blend of sensitivity and creativity, both logical and analytical, allows them to
-        see the unseen.</p>
+        <div class="page-subheader">
+          <h2 class> meet the founders <h2>
+          <h3 class>their unique blend of sensitivity and creativity, both logical and analytical,
+          allows them to see the unseen.</h3>
+        </div>
         <p>
         with their diverse backgrounds and lived experiences, michael kleynhans and carolyne wamono's shared passion for
         business, innovation, design, and technology came together to establish kuwona studios in 2022.<br><br>
@@ -47,6 +48,7 @@
 
         if you're inspired by our vision and would like to learn more, we'd love to hear from you.
         reach out to us at <a href="/contact" class="contact-link"> office@kuwonastudios.com </a>
+        </p>
       </div>
       <!--Footer with open block field -->
       <footer class="site-footer">
