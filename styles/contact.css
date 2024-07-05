@@ -46,7 +46,7 @@ body#collection-666af37c8650031532ebdd80 {
   position: absolute;
   top: -50%;
   left: -50%;
-  z-index: -1; /* Adjusted z-index to ensure it's below content */
+  z-index: 5000; /* Adjusted z-index to ensure it's below content */
   display: block;
   height: 200%;
   width: 200%;
