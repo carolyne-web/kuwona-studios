@@ -1,0 +1,124 @@
+
+.site-navigation {
+  text-transform: lowercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the logo */
+
+.site-navigation {
+  position: relative; /* add this to make the menu toggle button absolute */
+
+  #logo {
+    font-size: 25px;
+    font-family: "Satoshi-Variable";
+  }
+
+  #logo a:hover {
+    color: #F2FBFB !important;
+    opacity: 1;
+  }
+}
+
+.site-navigation-list {
+  padding: 0;
+  display: flex; /* Ensure the list items are displayed in a row by default */
+  justify-content: space-around; /* Adjust as needed */
+}
+
+.site-navigation-item {
+  display: inline-block;
+  font-size: 19px;
+  font-family: "Satoshi-Variable";
+
+  & + .site-navigation-item {
+    margin-left: 1em;
+  }
+
+  a {
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      #596A6A,
+      #596A6A 50%,
+      #F2FBFB 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: all 0.3s ease-in-out;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -3px;
+      z-index: 0;
+      position: absolute;
+      background: #596A6A;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-position: 0%;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  display: none; /* hide the button on desktop */
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .menu-toggle {
+    display: block; /* show the button on mobile */
+    z-index: 100000;
+  }
+
+  .site-navigation-list {
+    display: none; /* hide the menu on mobile */
+  }
+
+  .site-navigation-list.active {
+    display: block; /* show the menu on mobile when active */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    // background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-top: 60px; /* add some padding to account for the logo */
+  }
+
+  .site-navigation-list.active li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .site-navigation-list.active a {
+    padding: 10px;
+    font-size: 18px;
+  }
+}

@@ -55,117 +55,9 @@ body {
     }
   }
 
-
 .site-header {
   margin-bottom: 0vw;
 }
-
-.site-navigation {
-  text-transform: lowercase;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Style for the logo */
-
-.site-navigation {
-  #logo {
-    font-size: 25px;
-    font-family: "Satoshi-Variable";
-  }
-}
-.site-navigation #logo a:hover {
-  color: #F2FBFB !important;
-  opacity: 1;
-}
-
-
-
-  // text-align: center; /* Center the logo within the navigation */
-  // margin-bottom: 20px; /* Add some space below the logo */
-
-// .site-navigation .logo img {
-//   max-width: 100px; /* Adjust the size as needed */
-//   height: auto;    /* Maintain aspect ratio */
-//   display: inline-block; /* Ensure the image is displayed as an inline block */
-// }
-
-.site-navigation-list {
-  padding: 0;
-}
-
-.site-navigation-item {
-  display: inline-block;
-  font-size: 19px;
-  font-family: "Satoshi-Variable";
-
-  & + .site-navigation-item {
-    margin-left: 1em;
-  }
-
-  @main-color: #596A6A;
-
-a {
-  padding: 5px 0;
-  position: relative;
-  z-index: 1;
-  /* Use escaping to ensure Less doesn't misinterpret the property */
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-    to right,
-    @main-color,
-    @main-color 50%,
-    #F2FBFB 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  transition: all 0.3s ease-in-out;
-
-  &:before {
-    display: block;
-    content: '';
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -3px;
-    z-index: 0;
-    position: absolute;
-    background: @main-color;
-    transition: all 0.3s ease-in-out;
-  }
-
-  &:hover {
-    background-position: 0%;
-
-    &:before {
-      width: 100%;
-    }
-  }
-}
-}
-
-  // a {
-  //   color: #F2FBFB;
-  //   text-decoration: none;
-
-  //   &:hover {
-  //     color: #F2FBFB;
-  //     border-bottom: 1px solid #F2FBFB;
-  //   }
-  // }
-
-  // &.active-link > a {
-  //   color: #999;
-  //   border-bottom: 1px solid #F2FBFB;
-  // }
-
-
-// .active-link {
-//   border-bottom: 1px solid #F2FBFB !important;
-// }
 .site-title-heading {
   display: none;
   // .site-title-link {
@@ -194,10 +86,22 @@ a {
   width: 100%;
 }
 
+/* Default styles for mobile devices */
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  flex-flow: column wrap;
 }
+
+/* Styles for devices with a minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+}
+
+
 .follow ul, .legal ul {
   list-style: none;
   padding: 0;
@@ -281,34 +185,7 @@ form button {
 //     background-color: #003333; /* Darker shade for hover effect */
 // }
 
-/* Homepage
-***************************************************/
 
-body.homepage {
-  background-color: #001B1B;
-}
-
-.custom-container {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.custom-header {
-  font-size: 7vw;
-  margin-bottom: 30px !important;
-  color: #777777;
-  font-family: 'Satoshi-Variable';
-  font-weight: 300;
-}
-.explore-link {
-  color:#F2FBFB;
-  font-family: "Satoshi-Variable";
-  font-weight: 300;
-  font-size: 19px;
-}
 
 /* Blog list
 ***************************************************/

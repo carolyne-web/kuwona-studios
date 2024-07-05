@@ -1,0 +1,28 @@
+/* Homepage
+***************************************************/
+
+body.homepage {
+  background-color: #001B1B;
+}
+
+.custom-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.custom-header {
+  font-size: clamp(4rem, 7vw, 6rem);
+  margin-bottom: 30px !important;
+  color: #777777;
+  font-family: 'Satoshi-Variable';
+  font-weight: 300;
+}
+.explore-link {
+  color:#F2FBFB;
+  font-family: "Satoshi-Variable";
+  font-weight: 300;
+  font-size: 19px;
+}
