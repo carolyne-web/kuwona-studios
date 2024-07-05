@@ -19,6 +19,7 @@ body.homepage {
   color: #777777;
   font-family: 'Satoshi-Variable';
   font-weight: 300;
+  z-index: -5;
 }
 .explore-link {
   color:#F2FBFB;
