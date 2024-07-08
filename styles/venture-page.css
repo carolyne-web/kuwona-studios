@@ -38,6 +38,8 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 .venture-container {
   min-height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #collection-66757d0dcb3bd378d782c59c .site-navigation-item a:hover {
