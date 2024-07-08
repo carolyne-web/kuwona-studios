@@ -123,3 +123,7 @@ font-size: clamp(1rem, 2vw, 1.6rem);
   color: #001B1B !important;
   opacity: 1;
 }
+
+#collection-6669b17c28a22a7561e712f1 .site-footer a:hover {
+  color: #001b1b;
+}
