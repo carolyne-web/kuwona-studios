@@ -54,9 +54,14 @@
 #collection-667583cdd4f83552741d4d0e ul {
   color: #001b1b;
   list-style: circle;
+  font-size: clamp(1rem,1.4vw,1.5vw);
 }
 
 /*footer*/
-#collection-667583cdd4f83552741d4d0e .site-footer{
+#collection-667583cdd4f83552741d4d0e .site-footer {
   color: #001B1B;
+}
+
+#collection-667583cdd4f83552741d4d0e .site-footer ul {
+  list-style: none !important;
 }
