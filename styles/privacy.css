@@ -1,4 +1,14 @@
 /*nav */
+#collection-667583cdd4f83552741d4d0e .site-navigation #logo a:hover {
+  color: #001B1B !important;
+  opacity: 1;
+}
+
+#collection-667583cdd4f83552741d4d0e .site-navigation #logo {
+  color: #001B1B !important;
+  opacity: 1;
+}
+
 :root {
   --main-color: #596A6A;
 }
