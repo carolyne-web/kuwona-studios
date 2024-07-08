@@ -37,10 +37,6 @@ body#collection-6669b17c28a22a7561e712f1{
 
 }
 
-#collection-6669b17c28a22a7561e712f1 p {
-  color: #728181;
-}
-
 #collection-6669b17c28a22a7561e712f1 .menu-toggle {
   color: #001B1B;
 }
@@ -52,7 +48,7 @@ body#collection-6669b17c28a22a7561e712f1{
 
 .portfolio-number {
 margin-right: 10px;
-font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 .site-container .portfolio-list {
@@ -65,30 +61,51 @@ font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     width: 100%;
   }
 }
+
 .venture-name {
-  /* font-weight: 400; */
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.6rem);
   font-family: "Satoshi-Variable";
   color: #001B1B;
   display: inline-block; /* Ensures hover effect works correctly */
   transition: all .2s ease-in-out;
 }
-.venture-name a {
-  color: #001B1B;
-}
-.venture-name:hover {
-  font-size: clamp(1.3rem, 2.6vw, 1.9rem); /* Scaling up the anchor text on hover */
-  color: #001B1B;
-
-}
 
 .venture-type {
   color: #728181;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size:  clamp(1rem, 2vw, 1.6rem);
   margin-bottom: 0;
   margin-top: 10px;
 
 }
+#collection-6669b17c28a22a7561e712f1 p {
+  color: #728181;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+}
+
+@media screen and (max-width: 1024px) {
+  .venture-name {
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+  }
+
+  .venture-type {
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+  }
+  .portfolio-number {
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    }
+}
+
+.venture-name a {
+  color: #001B1B;
+
+}
+.venture-name:hover {
+  font-size: clamp(1.6rem, 2.2vw, 1.8rem); /* Scaling up the anchor text on hover */
+  color: #001B1B;
+
+}
+
+
 
 #collection-6669b17c28a22a7561e712f1 form input[type="text"],
 #collection-6669b17c28a22a7561e712f1 form input[type="email"],
