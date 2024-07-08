@@ -17,7 +17,7 @@
 
       </header>
       <div class="custom-container">
-          <h1 class="custom-header"> privacy policy
+          <h1 class="page-header"> privacy policy
           </h1>
           <h2>Introduction</h2>
     <p>Your privacy is important to us. This privacy policy explains how we collect, use, and protect your personal information when you use our website and services.</p>
@@ -88,7 +88,6 @@
           <div class="footer-container">
             <div class="newsletter">
               <h3 class=footer-header>newsletter</h3>
-                <p>subscribe for insights</p>
               <form class="footer-form">
                 <input type="text" placeholder="name" required>
                 <input type="email" placeholder="email" required>

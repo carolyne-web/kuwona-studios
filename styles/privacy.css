@@ -31,6 +31,15 @@
 
 /*body*/
 
+#collection-667583cdd4f83552741d4d0e .page-header {
+  color: #001b1b;
+}
+
+#collection-667583cdd4f83552741d4d0e h2 {
+  font-size: clamp(1rem,2vw,1.6rem);
+  color: #001b1b;
+}
+
 /*footer*/
 #collection-667583cdd4f83552741d4d0e .site-footer{
   color: #001B1B;
