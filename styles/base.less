@@ -240,3 +240,47 @@ p {
 .core-value {
   font-family: "Satoshi-Variable";
 }
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  /* CSS rules for mobile devices */
+  .custom-header {
+    font-size:  clamp(3.5rem, 7vw, 6rem);
+    line-height: 1em;
+  }
+
+}
+
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* CSS rules for iPads and tablets */
+  .custom-header {
+    font-size:  clamp(3.5rem, 7vw, 6rem);
+    line-height: 1em;
+  }
+}
+
+/* Small screens, laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* CSS rules for small screens and laptops */
+  .custom-header {
+    font-size:  clamp(3.5rem, 7vw, 6rem);
+    line-height: 1em;
+  }
+}
+
+/* Desktops, large screens */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* CSS rules for desktops and large screens */
+  .custom-header {
+    font-size: clamp(12rem, 7vw, 20rem);
+  }
+}
+
+/* Extra large screens, TV */
+@media (min-width: 1201px) {
+  /* CSS rules for extra large screens and TVs */
+  .custom-header {
+  font-size: clamp(12rem, 7vw, 20rem);
+  }
+}
