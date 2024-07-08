@@ -23,7 +23,7 @@ margin: 3rem 0;
     .about-intro-section {
       height: 100vh; /* Default for desktop and larger screens */
     }
-    
+
     .about-intro-section {
       display: flex;
       flex-direction: column;
@@ -55,4 +55,8 @@ b {
 
 .footer-container {
   height: 100%;
+}
+
+#collection-66698f5fbe689f718032a275 .site-footer a:hover {
+  color: #001b1b;
 }
