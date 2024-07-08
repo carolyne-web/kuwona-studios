@@ -27,7 +27,7 @@ body#collection-666af37c8650031532ebdd80 {
   background-color: #001b1b !important;
   color: #f2fbfb;
   border-radius: 6px;
-  position: relative;
+  /* position: relative; */
 }
 
 .HZaN3pKtOB3UmeTg6_qU {
@@ -42,12 +42,12 @@ body#collection-666af37c8650031532ebdd80 {
 
 /* moving beam */
 
-#textarea-yui_3_17_2_1_1718282318497_6218-field::before {
+/* #textarea-yui_3_17_2_1_1718282318497_6218-field::before {
   position: absolute;
   top: -50%;
   left: -50%;
   z-index: -5; /* Adjusted z-index to ensure it's below content */
-  display: block;
+  /* display: block;
   height: 200%;
   width: 200%;
   transform: rotate(-45deg);
@@ -55,14 +55,29 @@ body#collection-666af37c8650031532ebdd80 {
   background: linear-gradient(to right, #fff 20%, #fff 40%, #ECD08C 50%, #ECD08C 55%, #fff 70%, #fff 100%);
   background-size: 200% auto;
   animation: shine 3s linear infinite;
-}
+} */
 
-@keyframes shine {
+/* @keyframes shine {
   to {
     background-position: 200% center;
   }
-}
+} */
+
 /*resolve background form overlap with active site nav*/
-#collection-666af37c8650031532ebdd80 .site-navigation-list.active {
+/* #collection-666af37c8650031532ebdd80 .site-navigation-list.active {
   z-index: 10000;
+} */
+
+@media (min-width: 1920px) {
+  #textarea-yui_3_17_2_1_1718282318497_6218-field {
+    font-size: 1vw;
+  }
+
+  .xco6UBjvCbSeqJsFpGf5 {
+    font-size: 1vw;
+  }
+
+  .form-wrapper .field-list .title {
+    font-size: 1vw;
+  }
 }
