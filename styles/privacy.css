@@ -66,6 +66,10 @@
   list-style: none !important;
 }
 
-#collection-667583cdd4f83552741d4d0e .footer-form input[type="text"], .footer-form input[type="email"] {
+#collection-667583cdd4f83552741d4d0e .footer-form input[type="text"] {
+  background-color: #f2fbfb;
+}
+
+#collection-667583cdd4f83552741d4d0e .footer-form input[type="email"] {
   background-color: #f2fbfb;
 }
