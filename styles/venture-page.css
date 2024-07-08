@@ -33,7 +33,7 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 
 #collection-66757d0dcb3bd378d782c59c .site-footer{
-  color: #777;
+  color: #001B1B;
 }
 
 .venture-container {
@@ -66,4 +66,8 @@ body#collection-66757d0dcb3bd378d782c59c{
     color: #001B1B; /* Ensure text is visible on dark background */
     padding: 5px 0px;
     margin-bottom: 10px; /* Add space between inputs */
+}
+
+#collection-66757d0dcb3bd378d782c59c .site-footer a:hover {
+  color: #001b1b;
 }

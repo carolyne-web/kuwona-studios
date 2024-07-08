@@ -98,8 +98,8 @@ body#collection-6669b17c28a22a7561e712f1{
 
 .venture-name a:hover {
   opacity: 1;
-
 }
+
 .venture-name:hover {
   font-size: clamp(1.6rem, 2.1vw, 1.7rem); /* Scaling up the anchor text on hover */
   color: #001B1B;
