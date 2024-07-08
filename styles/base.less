@@ -110,6 +110,7 @@ body {
 .follow li, .legal li {
   margin: 8px 0;
 }
+
 .footer-header {
   font-family: "Satoshi-Variable";
   font-weight: 400;
@@ -223,15 +224,12 @@ body.collection-type-blog.view-list {
 
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
   margin-bottom: 30px;
   color: #bfc6c6;
 }
 
 p {
   font-family: "Satoshi-Variable";
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  line-height: 1.5;
 }
 
 .core-value {
@@ -270,6 +268,11 @@ p {
   .footer-header {
     font-size: 1em !important;
   }
+
+  p {
+    font-size: clamp(1.3rem,1.5vw, 2rem);
+  }
+
 }
 
 /* iPads, Tablets */
@@ -303,6 +306,10 @@ p {
 
   .footer-header {
     font-size: 1em !important;
+  }
+
+  p {
+    font-size: clamp(1.3rem,1.5vw, 2rem);
   }
 }
 
@@ -338,6 +345,10 @@ p {
   .footer-header {
     font-size: 1em !important;
   }
+
+  p {
+    font-size: clamp(1.3rem,1.5vw, 2rem);
+  }
 }
 
 /* Extra large screens, TV */
@@ -370,5 +381,13 @@ p {
 
   .footer-header {
     font-size: clamp(3rem, 2vw, 4rem) !important;
+  }
+
+  .explore-link {
+    font-size: clamp(3.3rem, 2.8vw, 4.8rem);
+  }
+
+  p {
+    font-size: clamp(3.5rem, 3vw, 5rem);
   }
 }
