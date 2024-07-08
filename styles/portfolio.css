@@ -28,14 +28,15 @@ body#collection-6669b17c28a22a7561e712f1{
     #001b1b 50%
   );
 }
+
+#collection-6669b17c28a22a7561e712f1 .menu-toggle {
+  color: #001B1B;
+}
+
 #collection-6669b17c28a22a7561e712f1 h2{
   color: #001B1B;
   margin-bottom: 0;
 
-}
-
-#collection-6669b17c28a22a7561e712f1 .menu-toggle {
-  color: #001B1B;
 }
 
 .portfolio-item {

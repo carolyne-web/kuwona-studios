@@ -1,0 +1,26 @@
+/*nav */
+:root {
+  --main-color: #596A6A;
+}
+
+#collection-667583cdd4f83552741d4d0e .site-navigation a {
+  color: #001B1B;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-color) 50%,
+    #001b1b 50%
+  );
+}
+
+#collection-667583cdd4f83552741d4d0e .menu-toggle {
+  color: #001B1B;
+}
+
+/*body*/
+/*footer*/
+#collection-667583cdd4f83552741d4d0e .site-footer{
+  color: #001B1B;
+}
