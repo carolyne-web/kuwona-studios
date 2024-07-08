@@ -44,8 +44,8 @@ body#collection-6669b17c28a22a7561e712f1{
 }
 
 .portfolio-number {
-margin-right: 10px;
-font-size: clamp(1rem, 2vw, 1.6rem);
+  margin-right: 10px;
+  font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 .site-container .portfolio-list {
@@ -69,7 +69,7 @@ font-size: clamp(1rem, 2vw, 1.6rem);
 
 .venture-type {
   color: #728181;
-  font-size:  clamp(1rem, 2vw, 1.6rem);
+  font-size:  clamp(1.1rem,1.7vw,1.5rem);
   margin-bottom: 0;
   margin-top: 10px;
 
@@ -94,12 +94,15 @@ font-size: clamp(1rem, 2vw, 1.6rem);
 
 .venture-name a {
   color: #001B1B;
+}
+
+.venture-name a:hover {
+  opacity: 1;
 
 }
 .venture-name:hover {
   font-size: clamp(1.6rem, 2.1vw, 1.7rem); /* Scaling up the anchor text on hover */
   color: #001B1B;
-
 }
 
 
