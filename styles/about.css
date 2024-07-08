@@ -15,32 +15,33 @@ body#collection-66698f5fbe689f718032a275 {
 margin: 3rem 0;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 769px) {
   #collection-66698f5fbe689f718032a275 h1 {
     margin-top: 0;
     }
-}
-.about-intro-section {
-  height: 100vh; /* Default for desktop and larger screens */
+
+    .about-intro-section {
+      height: 100vh; /* Default for desktop and larger screens */
+    }
+
+    .about-intro-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .about-founders-section {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
 }
 
 @media screen and (max-width: 768px) {
   .about-intro-section {
     height: 100%; /* 100% of the parent element's height on mobile devices */
   }
-}
-
-.about-intro-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.about-founders-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 b {
