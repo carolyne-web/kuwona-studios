@@ -27,7 +27,7 @@ body#collection-666af37c8650031532ebdd80 {
   background-color: #001b1b !important;
   color: #f2fbfb;
   border-radius: 6px;
-  /* position: relative; */
+  position: relative;
 }
 
 .HZaN3pKtOB3UmeTg6_qU {
@@ -64,9 +64,9 @@ body#collection-666af37c8650031532ebdd80 {
 } */
 
 /*resolve background form overlap with active site nav*/
-/* #collection-666af37c8650031532ebdd80 .site-navigation-list.active {
+#collection-666af37c8650031532ebdd80 .site-navigation-list.active {
   z-index: 10000;
-} */
+}
 
 @media (min-width: 1920px) {
   #textarea-yui_3_17_2_1_1718282318497_6218-field {
@@ -78,6 +78,10 @@ body#collection-666af37c8650031532ebdd80 {
   }
 
   .form-wrapper .field-list .title {
+    font-size: 1vw;
+  }
+
+  .form-submit-button-label {
     font-size: 1vw;
   }
 }
