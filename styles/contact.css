@@ -11,7 +11,7 @@ body#collection-666af37c8650031532ebdd80 {
 
 #page-666af37c8650031532ebdd80 {
   margin-top: 7vw;
-  
+
 }
 
 
@@ -62,4 +62,8 @@ body#collection-666af37c8650031532ebdd80 {
   to {
     background-position: 200% center;
   }
+}
+/*resolve background form overlap with active site nav*/
+#collection-666af37c8650031532ebdd80 .site-navigation-list.active {
+  z-index: 10000;
 }
