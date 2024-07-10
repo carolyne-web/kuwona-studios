@@ -57,8 +57,8 @@
             <div class="newsletter">
               <h3 class=footer-header>newsletter</h3>
               <form class="footer-form">
-                <input type="text" placeholder="name" required>
-                <input type="email" placeholder="email" required>
+                <input type="text" name="entry.325864919" placeholder="name" required>
+                <input type="email" name="entry.49786195" placeholder="email" required>
                 <button type="submit">→</button>
               </form>
             </div>
@@ -90,8 +90,8 @@
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
     <squarespace:script src="boldFadeIn.js" />
     <squarespace:script src="navigation.js"/>
+    <squarespace:script src="newsletter-form.js"/>
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
-
   </body>
 </html>
