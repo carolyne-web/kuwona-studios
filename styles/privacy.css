@@ -36,6 +36,7 @@
 }
 
 #collection-667583cdd4f83552741d4d0e h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
   color: #001b1b;
   font-weight: 400;
 }
