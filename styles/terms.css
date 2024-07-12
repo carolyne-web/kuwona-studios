@@ -1,0 +1,30 @@
+/*nav */
+#collection-6675831bde596541bddcfb64 .site-navigation #logo a:hover {
+  color: #001B1B !important;
+  opacity: 1;
+}
+
+#collection-6675831bde596541bddcfb64 .site-navigation #logo a {
+  color: #001B1B !important;
+  opacity: 1;
+}
+
+:root {
+  --main-color: #596A6A;
+}
+
+#collection-6675831bde596541bddcfb64 .site-navigation a {
+  color: #001B1B;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-color) 50%,
+    #001b1b 50%
+  );
+}
+
+#collection-6675831bde596541bddcfb64 .menu-toggle {
+  color: #001B1B;
+}
