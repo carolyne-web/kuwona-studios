@@ -36,7 +36,7 @@
 }
 
 #collection-667583cdd4f83552741d4d0e h2 {
-  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  font-size: 1rem;
   color: #001b1b;
   font-weight: 400;
 }
@@ -44,18 +44,18 @@
 #collection-667583cdd4f83552741d4d0e h3 {
   color: #001b1b;
   font-weight: 400;
-  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  font-size: 1rem;
 }
 
 #collection-667583cdd4f83552741d4d0e p {
   color: #001b1b;
-  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  font-size: 1rem;
 }
 
 #collection-667583cdd4f83552741d4d0e ul {
   color: #001b1b;
   list-style: circle;
-  font-size: clamp(1.3rem, 1.5vw, 2rem);
+  font-size: 1rem;
 }
 
 /*footer*/
