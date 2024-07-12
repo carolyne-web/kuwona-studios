@@ -85,14 +85,14 @@ body#collection-6669b17c28a22a7561e712f1{
     font-size: clamp(1.5rem, 2vw, 1.6rem);
   }
   .venture-type {
-    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   }
   .portfolio-number {
     font-size: clamp(1.5rem, 2vw, 1.6rem);
     }
 
   #collection-6669b17c28a22a7561e712f1 p {
-    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   }
 }
 
