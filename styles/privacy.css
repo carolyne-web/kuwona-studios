@@ -79,3 +79,14 @@
 #collection-667583cdd4f83552741d4d0e .site-footer a:hover {
   color: #001b1b;
 }
+
+#collection-667583cdd4f83552741d4d0e form input[type="text"],
+#collection-667583cdd4f83552741d4d0e form input[type="email"],
+#collection-667583cdd4f83552741d4d0e form input[type="name"] {
+    background-color:#F2FBFB;
+    border: none;
+    border-bottom: 1px solid #728181;
+    color: #001B1B; /* Ensure text is visible on dark background */
+    padding: 5px 0px;
+    margin-bottom: 10px; /* Add space between inputs */
+}

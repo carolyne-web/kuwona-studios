@@ -102,7 +102,6 @@
           <div class="footer-container">
             <div class="newsletter">
               <h3 class=footer-header>newsletter</h3>
-                <p>subscribe for insights</p>
               <form class="footer-form">
                 <input type="text" placeholder="name" required>
                 <input type="email" placeholder="email" required>
@@ -136,6 +135,7 @@
     <!-- combo and minify scripts when not logged in -->
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
     <squarespace:script src="navigation.js"/>
+    <squarespace:script src="newsletter-form.js"/>
 
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}

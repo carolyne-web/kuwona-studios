@@ -66,6 +66,8 @@
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
     <squarespace:script src="boldFadeIn.js" />
     <squarespace:script src="navigation.js"/>
+    <squarespace:script src="newsletter-form.js"/>
+
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
 
