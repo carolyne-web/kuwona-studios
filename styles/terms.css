@@ -75,3 +75,7 @@
 #collection-6675831bde596541bddcfb64 .footer-form input[type="email"] {
   background-color: #f2fbfb;
 }
+
+#collection-6675831bde596541bddcfb64 .site-footer a:hover {
+  color: #001b1b;
+}
