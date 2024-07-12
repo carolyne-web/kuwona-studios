@@ -9,7 +9,7 @@ body#collection-6669b17c28a22a7561e712f1{
   color: #001B1B;
 }
 
-#collection-6669b17c28a22a7561e712f1 .site-footer{
+#collection-6669b17c28a22a7561e712f1 .site-footer {
   color: #001B1B;
 }
 
@@ -70,7 +70,7 @@ body#collection-6669b17c28a22a7561e712f1{
 
 .venture-type {
   color: #728181;
-  font-size:  clamp(1.1rem,1.7vw,1.5rem);
+  font-size:  clamp(1.1rem, 1.7vw, 1.5rem);
   margin-bottom: 0;
   margin-top: 10px;
 
@@ -84,17 +84,21 @@ body#collection-6669b17c28a22a7561e712f1{
   .venture-name {
     font-size: clamp(1.5rem, 2vw, 1.6rem);
   }
-
   .venture-type {
-    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
   }
   .portfolio-number {
     font-size: clamp(1.5rem, 2vw, 1.6rem);
     }
+
+  #collection-6669b17c28a22a7561e712f1 p {
+    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+  }
 }
 
 .venture-name a {
   color: #001B1B;
+  text-decoration: underline;
 }
 
 .venture-name a:hover {
