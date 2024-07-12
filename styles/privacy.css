@@ -36,13 +36,11 @@
 }
 
 #collection-667583cdd4f83552741d4d0e h2 {
-  font-size: clamp(1rem,2vw,1.6rem);
   color: #001b1b;
   font-weight: 400;
 }
 
 #collection-667583cdd4f83552741d4d0e h3 {
-  font-size: clamp(1rem,2vw,1.6rem);
   color: #001b1b;
   font-weight: 400;
 }
@@ -54,7 +52,6 @@
 #collection-667583cdd4f83552741d4d0e ul {
   color: #001b1b;
   list-style: circle;
-  font-size: clamp(1rem,1.4vw,1.5vw);
 }
 
 /*footer*/
