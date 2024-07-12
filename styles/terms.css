@@ -36,13 +36,13 @@
 }
 
 #collection-6675831bde596541bddcfb64  h2 {
-  font-size: clamp(1.3rem,1.5vw, 2rem);
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
   color: #001b1b;
   font-weight: 400;
 }
 
 #collection-6675831bde596541bddcfb64  h3 {
-  font-size: clamp(1.3rem,1.5vw, 2rem);
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
   color: #001b1b;
   font-weight: 400;
 }
@@ -55,7 +55,7 @@
 #collection-6675831bde596541bddcfb64  ul {
   color: #001b1b;
   list-style: circle;
-  font-size: clamp(1.3rem,1.5vw, 2rem);
+  font-size: clamp(1.3rem, 1.5vw, 2rem);
 }
 
 /*footer*/
