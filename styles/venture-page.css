@@ -25,6 +25,7 @@ body#collection-66757d0dcb3bd378d782c59c{
 
 #collection-66757d0dcb3bd378d782c59c .page-header {
   color: #001B1B;
+  z-index: -5;
 }
 
 #collection-66757d0dcb3bd378d782c59c p {
