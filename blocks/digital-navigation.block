@@ -1,0 +1,24 @@
+<div class= "digital-navigation-wrapper">
+  <nav class="digital-navigation">
+      <div id="digital-logo">
+          <a href="/">
+              <!-- Include your SVG logo here -->
+              <img src="assets/fonts/KUWONA (1).svg" alt="Logo">
+          </a>
+      </div>
+      <div class="nav-text-area">
+        <div class="nav-text">
+          <p class="digital-accent-text">crafting thoughtful, tailored strategies that harmonise</p>
+        </div>
+      </div>
+      <div class="digital-nav-button-area">
+        <button class="digital-nav-button digital-btn">explore</button>
+        <ul class="digital-navigation-list digital-btn">
+          <li class="digital-navigation-item"><a href="#home">home</a></li>
+          <li class="digital-navigation-item"><a href="#services">services</a></li>
+          <li class="digital-navigation-item"><a href="#insights">insights</a></li>
+          <li class="digital-navigation-item"><a href="#info">info</a></li>
+        </ul>
+      </div>
+  </nav>
+</div>

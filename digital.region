@@ -3,87 +3,90 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- include system scripts, page meta, and header code injection -->
     {squarespace-headers}
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
-    <div class="site-container">
+    <div class="digital-container">
 
-      <header class="site-header">
+      <header class="digital-header">
         <!-- site navigation -->
-        <squarespace:navigation navigationId="siteNav" template="site-navigation" />
-
+        <squarespace:navigation navigationId="digitalNav" template="digital-navigation" />
       </header>
-      <div class="about-intro-section">
-        <h1 class="page-header">we dare you to believe in a better world—<br>a world where empowering ideas drive positive change,
-        heal communities, and foster a culture that cares.
+      <div id="digital-hero-section">
+        <h1>
+        A Creative studio specialising in <span style="color: #5D686C"> bespoke digital solutions.</span>
         </h1>
-        <p>
-        driven by our core values of <b>curiosity</b>, <b>boldness</b> and <b>originality</b>, meets
-        <b>compassion</b>, <b>integrity</b> and <b>sustainability</b>, we strive to create and empower ventures across
-        industries that embody these principles
-        and reflect our vision of a better world.
-        <br>our mission is to make a lasting impact that resonates for generations to come.
-        </p>
+        <hr class="digital-divider">
       </div>
-      <div class ="about-founders-section">
-        <div class="page-subheader">
-          <h2 class> meet the founders <h2>
-          <h3 class>their unique blend of sensitivity and creativity, both logical and analytical,
-          allows them to see the unseen.</h3>
-        </div>
-        <p>
-        with their diverse backgrounds and lived experiences, michael kleynhans and carolyne wamono's shared passion for
-        business, innovation, design, and technology came together to establish kuwona studios in 2022.<br><br>
-
-        further united by their love for humanity, they aim to cultivate collaborations and true partnerships with like-minded
-        individuals to create ventures that ultimately lead to a lasting, positive impact in the world.
-        harnessing their expertise, michael and carolyne are dedicated to shaping businesses that resonate with the
-        ever-evolving needs of the present and future.<br><br>
-
-        with a hands-on approach, they strive for excellence, deeply involving themselves in every venture from start to
-        finish to ensure its success.<br><br>
-
-        if you're inspired by our vision and would like to learn more, we'd love to hear from you.
-        reach out to us at <a href="/contact" class="contact-link"> office@kuwonastudios.com </a>
-        </p>
-      </div>
-      <!--Footer with open block field -->
-      <footer class="site-footer">
-          <hr class="horizontal-line">
-          <div class="footer-container">
-            <div class="newsletter">
-              <h3 class=footer-header>newsletter</h3>
-              <form method="post" action="https://script.google.com/macros/s/AKfycbxbg_hHFsVsMGtEIcRboJ4cu3dnCa-N_iTY7XdwuOgz12allun4BYqs5vuXLYgidOdP2A/exec" name="newsletter-form"class="footer-form">
-                <input type="text" name="your-name" placeholder="name" required>
-                <input type="email" name="your-email" placeholder="email" required>
-                <button type="submit" value="submit" id="submit">→</button>
-              </form>
-            </div>
-            <div class="follow">
-              <h3 class=footer-header>contact</h3>
-              <ul>
-                <li>office@kuwonastudios.com</li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="legal">
-              <h3 class=footer-header>legal</h3>
-              <ul>
-                <li><a href="/privacy">privacy policy</a></li>
-                <li><a href="/terms">terms & conditions</a></li>
-              </ul>
-            </div>
+      <div id= "digital-services-section">
+        <h1>
+        what we do
+        </h1>
+        <div class="cards-container">
+          <div class="card card-1 digital-accent-text">
+            <span class="card-heading"> design </span>
+            <ul class="card-list">
+              <li>
+              Web Development
+              </li>
+              <li>
+              UI/UX Design
+              </li>
+              <li>
+              Brand strategy
+              </li>
+            </ul>
           </div>
-    <div class="footer-bottom">
-      © kuwona studios 2024
-    </div>
-  </div>
-        <squarespace:block-field id="footerBlocks" columns="12" />
-      </footer>
-
+          <div class="card card-2 digital-accent-text">
+            <span class= "card-heading">
+            communication
+            </span>
+            <ul class="card-list">
+              <li>
+              SEO
+              </li>
+              <li>
+              GOOGLE ADS
+              </li>
+              <li>
+              Email Marketing
+              </li>
+              <li>
+              Copywriting
+              </li>
+            </ul>
+          </div>
+          <div class="card card-3 digital-accent-text">
+            <span class= "card-heading">
+            innovation
+            </span>
+            <ul class="card-list">
+              <li>
+              Digital Product Design
+              </li>
+              <li>
+              Consulting
+              </li>
+              <li>
+              Product Development
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="digital-services-cta">
+          <p class= "digital-accent-text">
+            Our goal is simple: to make your brand memorable, recognisable, profitable, and impactful. VIEW ALL
+          </p>
+        </div>
+        <div>
+          <hr class="digital-divider">
+        </div>
+      </div>
     </div>
 
     <!-- combo and minify scripts when not logged in -->
