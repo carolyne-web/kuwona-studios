@@ -16,6 +16,7 @@
       <header class="digital-header">
         <!-- site navigation -->
         <squarespace:navigation navigationId="digitalNav" template="digital-navigation" />
+        <squarespace:navigation navigationId="stickylNav" template="sticky-bottom-navigation" />
       </header>
       <div id="digital-hero-section">
         <h1>
@@ -85,6 +86,48 @@
         </div>
         <div>
           <hr class="digital-divider">
+        </div>
+      </div>
+      <div id= "digital-featured-work-section">
+        <h1>
+          featured work
+        </h1>
+        cabal . digital . sanic . mzansi . heaven spaces . out of south africa
+      </div>
+      <div id= "digital-insights-section">
+        <div class="digital-insights-sub">
+          <div class= "blog-1">
+          </div>
+          <div class="digital-insights-header">
+            <h1>
+            insights
+            </h1>
+          </div>
+        </div>
+        <div class="digital-insights-sub">
+          <div class="blog-2">
+          </div>
+          <div class="blog-3">
+          </div>
+        </div>
+      </div>
+      <div id= "digital-contact-section">
+        <h1>
+          lets have a conversation
+        </h1>
+        <p>
+          schedule a call
+        </p>
+        <p>
+          email us at digital@kuwonastudios.com
+        </p>
+        <div class="digital-footer">
+          <p>
+            kuwona digital © 2024
+          </p>
+          <p>
+            Cape Town, South africa
+          </p>
         </div>
       </div>
     </div>

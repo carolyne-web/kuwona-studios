@@ -160,6 +160,9 @@
 /* background color */
 body#collection-66b5cdf671c3b42cfb240147 {
   background-color: var(--primary-bg-color);
+  margin: 0;
+  font-family: 'Nimbus Sans', sans-serif;
+  min-height: 100vh; /* Full height of the viewport */
 }
 
 /*STRUCTURE */
@@ -191,6 +194,49 @@ body#collection-66b5cdf671c3b42cfb240147 {
 
 
 /* NAVIGATION */
+/** sticky **/
+
+.digital-sticky-nav-wrapper {
+  position: fixed; /* Fix the nav to the viewport */
+  bottom: 20px; /* Offset from the bottom of the viewport */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  width: auto;
+  z-index: 1000; /* Ensure it appears above other content */
+  display: flex;
+  justify-content: center;
+}
+
+.sticky-bottom-nav {
+  background-color: #ffffff; /* Your background color */
+  padding: 10px 20px;
+  border-radius: 25px; /* Optional: Add some rounding for a button-like appearance */
+}
+
+.sticky-bottom-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px; /* Adjust spacing between menu items */
+  justify-content: center;
+}
+
+.sticky-nav-menu-item {
+  text-decoration: none;
+  color: #000; /* Your text color */
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  font-size: 14px; /* Ensure small font size for mobile */
+  cursor: pointer;
+}
+
+.sticky-nav-menu-item:hover {
+  background-color: #2D677B; /* Your hover color */
+}
+
 /* desktop */
 .digital-navigation {
   display: flex;
@@ -298,7 +344,7 @@ body#collection-66b5cdf671c3b42cfb240147 {
 }
 
 #digital-services-section {
-  height: 90vh;
+  height: 95vh;
   position: relative;
 }
 
@@ -319,6 +365,44 @@ body#collection-66b5cdf671c3b42cfb240147 {
   position: absolute;
   bottom: 0;
   margin: 0;
+}
+
+#digital-featured-work-section {
+  height: 50vh;
+}
+
+#digital-insights-section {
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;  /* Allows the blocks to wrap if needed */
+  align-items: flex-end;  /* Aligns items to the bottom of the container */
+  position: relative;  /* Allows absolute positioning within the container */
+  margin: 0;
+  padding: 0;
+}
+
+.blog-1, .blog-2, .blog-3 {
+  flex: 1;  /* Allows blocks to grow and shrink as needed */
+  margin: 10px;  /* Space between blocks */
+  /* Set a fixed height for demonstration or use dynamic content */
+}
+
+.blog-1 {
+  background-color: lightblue;
+  height: 450px;
+  width: 450px;
+}
+
+.blog-2 {
+  background-color: lightcoral;
+  height: 200px;
+  width: 250px;
+}
+
+.blog-3 {
+  background-color: lightgreen;
+  height: 150px;
+  width: 250px
 }
 
 /* COMPONENTS */
