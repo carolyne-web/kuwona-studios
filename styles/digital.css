@@ -13,7 +13,11 @@
     font-weight: 100;
 }
 
-
+#digital-logo {
+  font-family: uniwars, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 /* Heading Sizes */
 /** Mobile devices **/
 @media (max-width: 480px) {
@@ -127,7 +131,7 @@
 
 /* paragraph */
 #collection-66b5cdf671c3b42cfb240147 p {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Jet Brains Mono", monospace;
   line-height: 1.2;
 }
@@ -135,14 +139,15 @@
 /* accents & buttons */
 
 .digital-accent-text {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Jet Brains Mono", monospace;
   line-height: 1.2;
   text-transform: uppercase;
+  display: inline;
 }
 
 .digital-btn {
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Jet Brains Mono", monospace;
   line-height: 1.2;
   color: var(--secondary-text-color);
@@ -159,10 +164,30 @@
 
 /* background color */
 body#collection-66b5cdf671c3b42cfb240147 {
-  background-color: var(--primary-bg-color);
   margin: 0;
   font-family: 'Nimbus Sans', sans-serif;
   min-height: 100vh; /* Full height of the viewport */
+  background: radial-gradient(circle,
+  #263F3F,
+  #4C5D5D,
+  #737C7C,
+  #001b1b,
+  #B7B6C2,
+  #4B5043,
+);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 /*STRUCTURE */
@@ -198,7 +223,7 @@ body#collection-66b5cdf671c3b42cfb240147 {
 
 .digital-sticky-nav-wrapper {
   position: fixed; /* Fix the nav to the viewport */
-  bottom: 20px; /* Offset from the bottom of the viewport */
+  bottom: 40px; /* Offset from the bottom of the viewport */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust for perfect centering */
   width: auto;
@@ -208,9 +233,11 @@ body#collection-66b5cdf671c3b42cfb240147 {
 }
 
 .sticky-bottom-nav {
-  background-color: #ffffff; /* Your background color */
-  padding: 10px 20px;
-  border-radius: 25px; /* Optional: Add some rounding for a button-like appearance */
+  background-color: rgba(30, 30, 30, .4);
+  padding: 5px 12px;
+  border-radius: 12px; /* Rounding for a button-like appearance */
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
 }
 
 .sticky-bottom-nav-links {
@@ -224,13 +251,13 @@ body#collection-66b5cdf671c3b42cfb240147 {
 
 .sticky-nav-menu-item {
   text-decoration: none;
-  color: #000; /* Your text color */
+  color: #f9f6f4;
   padding: 8px 12px;
-  font-weight: bold;
-  border-radius: 15px;
   transition: background-color 0.3s ease;
-  font-size: 14px; /* Ensure small font size for mobile */
+  font-size: 12px; /* Ensure small font size for mobile */
   cursor: pointer;
+  font-family: "Jet Brains Mono", monospace;
+  text-transform: uppercase;
 }
 
 .sticky-nav-menu-item:hover {
@@ -241,67 +268,62 @@ body#collection-66b5cdf671c3b42cfb240147 {
 .digital-navigation {
   display: flex;
   align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Distribute space between items */
-  color: #F2FBFB; /* Set your text color */
+  justify-content: center; /* Center the content horizontally */
+  color: var(--text-color); /* Set your text color */
+  position: relative; /* Needed for absolute positioning of the logo */
 }
 
 #digital-logo {
-  flex: 1; /* Logo takes as much space as needed on the left */
+  position: absolute; /* Position the logo absolutely */
+  left: 0; /* Align the logo to the left */
+  padding-left: 10px; /* Add padding if needed */
 }
 
-#digital-logo img {
-  height: 20px;
-  padding: 5px 0;
+#digital-logo a {
+  font-size: 20px;
 }
 
 .nav-text-area {
-  flex: 2; /* Text takes the remaining space and is centered */
-  text-align: left; /* Center text horizontally */
-  border: 1px solid #F2FBFB;
+  overflow: hidden; /* Hide the overflow for the marquee effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  position: relative; /* Required for positioning the inner content */
+  text-align: center;
+  border: 1px solid #5D686C;
   border-radius: 12px;
-  padding: 0px 12px;
+  padding: 8px 12px;
+  /* width: 50%; */
 }
 
-.nav-text {
+.nav-text-marquee {
   text-transform: uppercase;
+  opacity: 0.8;
+  display: inline-block;
+  white-space: nowrap; /* Prevent text wrapping */
+  animation: marquee 20s linear infinite; /* Apply the marquee animation */
 }
 
-.digital-nav-button-area {
-  flex: 1; /* Button takes as much space as needed on the right */
-  text-align: right; /* Align button to the right */
-  padding: 5px 0;
-  position: relative; /* Added: Position context for the navigation list */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start position outside the view on the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End position outside the view on the left */
+  }
 }
+
 
 .digital-navigation-list {
-  display: none; /* Added: Hide the navigation list by default */
-  position: absolute; /* Added: Position the list absolutely */
-  top: 100%; /* Added: Position below the button */
-  right: 0; /* Added: Align the list to the right */
-  background-color: #001B1B; /* Added: Same background as the nav */
+  display: none; /* Hide the navigation list by default */
+  position: absolute; /* Position the list absolutely */
+  top: 100%; /* Position below the button */
+  right: 0; /* Align the list to the right */
+  background-color: #001B1B; /* Same background as the nav */
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-/* Show the navigation list when hovering over the button area */
-.digital-nav-button-area:hover .digital-navigation-list {
-  display: flex; /* Added: Show the list when hovering */
-  flex-direction: column; /* Added: Stack the nav items vertically */
-}
-
-.digital-navigation-item a {
-  display: block;
-  text-decoration: none;
-  color: #F2FBFB;
-}
-
-/* Add hover effects for the nav items */
-.digital-navigation-item a:hover {
-  background-color: #2D677B; /* Added: Highlight the item on hover */
-  color: #001B1B; /* Added: Change text color on hover */
-}
 
 /* Mobile styles */
 @media (max-width: 768px) {
@@ -319,15 +341,11 @@ body#collection-66b5cdf671c3b42cfb240147 {
 
   .nav-text-area {
       width: auto; /* Full width for text area */
-      border: 1px solid #F2FBFB;
+      border: 1px solid #5D686C;
       padding: 0px 12px; /* Adjust padding */
       text-align: left; /* Center text */
       margin-top: 100px; /* Space above the text area */
       position: absolute;
-  }
-
-  .digital-nav-button {
-      width: auto; /* Auto width for button */
   }
 }
 
@@ -420,14 +438,16 @@ body#collection-66b5cdf671c3b42cfb240147 {
   width: 500px; /* Adjust as needed */
   height: 350px; /* Adjust as needed */
   margin: 0 auto; /* Center the container */
-  margin-top: 25px;
+  margin-top: 60px;
 }
 
 .card {
   position: absolute;
   width: 300px; /* Adjust card width */
   height: 200px; /* Adjust card height */
-  background-color: #F2FBFB; /* Card background color */
+  background-color: rgba(225, 225, 225, .4);
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
   border: 2px solid transparent; /* Default border */
   display: flex;
   align-items: flex-start;
