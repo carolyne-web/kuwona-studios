@@ -1,0 +1,207 @@
+/* KUWONA STUDIOS - Portfolio Page Styles */
+
+body.portfolio-page {
+  background-color: #F2FBFB;
+}
+
+.portfolio-header {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #001B1B;
+}
+
+.portfolio-page .site-footer {
+  color: #001B1B;
+}
+
+.portfolio-page .site-navigation a {
+  color: #001B1B;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    #596A6A,
+    #596A6A 50%,
+    #001b1b 50%
+  );
+}
+
+.portfolio-page .menu-toggle {
+  color: #001B1B;
+}
+
+.portfolio-page h2 {
+  color: #001B1B;
+  margin-bottom: 0;
+}
+
+.portfolio-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-number {
+  margin-right: 10px;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+
+.site-container .portfolio-list {
+  width: 50%;
+  padding: 0;
+}
+
+.venture-name {
+  font-size: clamp(1rem, 2vw, 1.6rem);
+  font-family: "Satoshi-Variable", sans-serif;
+  color: #001B1B;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.venture-type {
+  color: #728181;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.portfolio-page p {
+  color: #728181;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+}
+
+.venture-name a {
+  color: #001B1B;
+  text-decoration: underline;
+}
+
+.venture-name a:hover {
+  opacity: 1;
+}
+
+.venture-name:hover {
+  font-size: clamp(1.6rem, 2.1vw, 1.7rem);
+  color: #001B1B;
+}
+
+.portfolio-page form input[type="text"],
+.portfolio-page form input[type="email"],
+.portfolio-page form input[type="name"] {
+  background-color: #F2FBFB;
+  border: none;
+  border-bottom: 1px solid #728181;
+  color: #001B1B;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+}
+
+.portfolio-page .site-navigation #logo a:hover {
+  color: #001B1B !important;
+  opacity: 1;
+}
+
+.portfolio-page .site-footer a:hover {
+  color: #001b1b;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .site-container .portfolio-list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .venture-name {
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+  }
+
+  .venture-type {
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  }
+
+  .portfolio-number {
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+  }
+
+  .portfolio-page p {
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  }
+}
+
+/* Venture Header */
+.venture-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background-color: #C0ED98;
+  color: #001B1B;
+}
+
+.status-badge.coming {
+  background-color: #728181;
+  color: #F2FBFB;
+}
+
+.status-badge.development {
+  background-color: #596A6A;
+  color: #F2FBFB;
+}
+
+/* Venture Meta Information */
+.venture-meta {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-item {
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  color: #728181;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+}
+
+.meta-label {
+  font-weight: 500;
+  color: #596A6A;
+}
+
+.meta-link {
+  color: #596A6A;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.meta-link:hover {
+  color: #001B1B;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .venture-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,580 @@
+/* KUWONA STUDIOS - Main Stylesheet */
+/* Compiled from LESS and consolidated for GitHub Pages */
+
+/* ===================================
+   FONT IMPORTS
+   =================================== */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   FONT FACES
+   =================================== */
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('../assets/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url('../assets/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* ===================================
+   BASE STYLES
+   =================================== */
+body {
+  font-family: 'Satoshi-Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  background-color: #001B1B;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site-container {
+  line-height: 1.6em;
+  color: #F2FBFB;
+  padding: 2vw 5vw;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.2em;
+  font-family: 'Satoshi-Variable', sans-serif;
+}
+
+a {
+  color: #F2FBFB;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a.disabled {
+  color: #ccc;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+p {
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+/* ===================================
+   NAVIGATION
+   =================================== */
+.site-navigation {
+  text-transform: lowercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.site-navigation #logo {
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+.site-navigation #logo a:hover {
+  color: #F2FBFB !important;
+  opacity: 1;
+}
+
+.site-navigation-list {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+}
+
+.site-navigation-item {
+  display: inline-block;
+  font-family: "Satoshi-Variable", sans-serif;
+  margin-left: 1em;
+}
+
+.site-navigation-item a {
+  padding: 5px 0;
+  position: relative;
+  z-index: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #596A6A,
+    #596A6A 50%,
+    #F2FBFB 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+}
+
+.site-navigation-item a:before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  z-index: 0;
+  position: absolute;
+  background: #596A6A;
+  transition: all 0.3s ease-in-out;
+}
+
+.site-navigation-item a:hover {
+  background-position: 0%;
+}
+
+.site-navigation-item a:hover:before {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #F2FBFB;
+  font-family: 'Satoshi-Variable', sans-serif;
+}
+
+/* ===================================
+   HEADER & FOOTER
+   =================================== */
+.site-header {
+  margin-bottom: 0vw;
+}
+
+.site-title-heading {
+  display: none;
+}
+
+.site-footer {
+  font-weight: 300;
+  margin-top: 6vw;
+  margin-bottom: 1vw;
+  line-height: 1.2em;
+  color: #F2FBFB;
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+.horizontal-line {
+  border: none;
+  border-top: 1px solid #777777;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.follow ul, .legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  color: #777;
+}
+
+.site-footer a {
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #F2FBFB;
+}
+
+.follow li, .legal li {
+  margin: 8px 0;
+}
+
+.footer-header {
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+.footer-bottom {
+  margin-top: 2em;
+}
+
+/* ===================================
+   FORMS
+   =================================== */
+form input[type="text"],
+form input[type="email"] {
+  background-color: #001B1B;
+  border: none;
+  border-bottom: 1px solid #777;
+  color: #F2FBFB;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+  font-family: "Satoshi-Variable", sans-serif;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.footer-form input[type="text"],
+.footer-form input[type="email"] {
+  background-color: #001B1B;
+  border: none;
+  border-bottom: 1px solid #777;
+  color: #F2FBFB;
+  padding: 5px 0px;
+  margin-bottom: 10px;
+  width: 200px;
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+form input[type="text"]:hover,
+form input[type="email"]:hover {
+  background-color: #002525;
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder {
+  color: #777;
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+form button {
+  background-color: #001B1B;
+  color: #F2FBFB;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.form-submit-button {
+  font-weight: 400 !important;
+  position: relative;
+}
+
+.form-submit-button::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #596A6A;
+  transition: width 0.3s ease;
+}
+
+.form-submit-button:hover::after {
+  width: 100%;
+}
+
+/* ===================================
+   GLOBAL ELEMENTS
+   =================================== */
+.page-header {
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #bfc6c6;
+}
+
+.core-value {
+  font-family: "Satoshi-Variable", sans-serif;
+}
+
+/* Animated bold effect for hero text */
+.bird {
+  font-weight: 300;
+  transition: font-weight 0.6s ease;
+}
+
+.bird.bold {
+  font-weight: 500;
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS - MOBILE (max 480px)
+   =================================== */
+@media (max-width: 480px) {
+  .custom-header {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1em;
+  }
+
+  .page-header {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .site-footer {
+    font-size: 1em !important;
+  }
+
+  .footer-header {
+    font-size: 1em !important;
+  }
+
+  p {
+    font-size: clamp(1.3rem, 1.5vw, 2rem);
+    line-height: 1.5;
+  }
+
+  .site-navigation-item a {
+    font-size: 1.2rem;
+  }
+
+  .site-navigation #logo {
+    font-size: 1.4rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 100000;
+  }
+
+  .site-navigation-list {
+    display: none;
+  }
+
+  .site-navigation-list.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-top: 50%;
+  }
+
+  .site-navigation-list.active li {
+    width: 100%;
+    border-bottom: 1px solid #777;
+    margin-bottom: 20px;
+  }
+
+  .site-navigation-list.active a {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+  }
+
+  .footer-form input[type="text"],
+  .footer-form input[type="email"] {
+    width: 80%;
+  }
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS - TABLETS (481px - 768px)
+   =================================== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .custom-header {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1em;
+  }
+
+  .page-header {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .site-footer {
+    font-size: 1em !important;
+  }
+
+  .footer-header {
+    font-size: 1em !important;
+  }
+
+  p {
+    font-size: clamp(1.3rem, 1.5vw, 2rem);
+    line-height: 1.5;
+  }
+
+  .site-navigation-item a {
+    font-size: 1.2rem;
+  }
+
+  .site-navigation #logo {
+    font-size: 1.4rem;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS - LAPTOPS (769px - 1919px)
+   =================================== */
+@media (min-width: 769px) and (max-width: 1919px) {
+  .custom-header {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1em;
+  }
+
+  .page-header {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .site-footer {
+    font-size: 1em !important;
+  }
+
+  .footer-header {
+    font-size: 1em !important;
+  }
+
+  p {
+    font-size: clamp(1.3rem, 1.5vw, 2rem);
+    line-height: 1.5;
+  }
+
+  .site-navigation-item a {
+    font-size: 1.2rem;
+  }
+
+  .site-navigation #logo {
+    font-size: 1.4rem;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS - LARGE SCREENS (1920px+)
+   =================================== */
+@media (min-width: 1920px) {
+  .custom-header {
+    font-size: 7vw;
+  }
+
+  h1 {
+    font-size: 5vw;
+    line-height: 1.1em;
+  }
+
+  .page-header {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  .site-footer {
+    font-size: 1vw !important;
+  }
+
+  .footer-header {
+    font-size: 1vw !important;
+  }
+
+  .explore-link {
+    font-size: 1.5vw;
+  }
+
+  p {
+    font-size: 1.6vw;
+    line-height: 1.5;
+  }
+
+  .site-navigation-item a {
+    font-size: 1.5vw;
+  }
+
+  .site-navigation #logo {
+    font-size: 1.7vw;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+}
+
+/* ===================================
+   PAGE TRANSITIONS
+   =================================== */
+.page-transition {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>404 - Page Not Found | Kuwona Studios</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/fonts/KUWONA.svg">
+
+  <style>
+    .error-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: clamp(6rem, 15vw, 12rem);
+      font-weight: 300;
+      line-height: 1;
+      margin: 0;
+      opacity: 0.3;
+    }
+
+    .error-message {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      margin: 20px 0;
+    }
+
+    .error-description {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      color: #728181;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .error-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-link {
+      color: #596A6A;
+      padding: 12px 24px;
+      border: 1px solid #596A6A;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .error-link:hover {
+      background-color: #596A6A;
+      color: #F2FBFB;
+      opacity: 1;
+    }
+
+    @media (max-width: 480px) {
+      .error-links {
+        flex-direction: column;
+        width: 80%;
+      }
+
+      .error-link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="page-transition">
+
+  <div class="site-container">
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <nav class="site-navigation">
+        <div id="logo">
+          <a href="index.html">kuwona studios</a>
+        </div>
+        <button class="menu-toggle">menu</button>
+        <ul class="site-navigation-list" id="nav-list">
+          <li class="site-navigation-item">
+            <a href="about.html">about</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="portfolio.html">portfolio</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="insight.html">insight</a>
+          </li>
+          <li class="site-navigation-item">
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Error Content -->
+    <div class="error-container">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-message">page not found</h2>
+      <p class="error-description">
+        the page you're looking for doesn't exist or has been moved.<br>
+        let's get you back on track.
+      </p>
+      <div class="error-links">
+        <a href="index.html" class="error-link">go home</a>
+        <a href="portfolio.html" class="error-link">view ventures</a>
+        <a href="contact.html" class="error-link">contact us</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <hr class="horizontal-line">
+      <div class="footer-container">
+        <div class="newsletter">
+          <h3 class="footer-header">newsletter</h3>
+          <form class="footer-form" name="newsletter-form">
+            <input type="text" name="your-name" placeholder="name" required>
+            <input type="email" name="your-email" placeholder="email" required>
+            <button type="submit" class="form-submit-button">→</button>
+          </form>
+        </div>
+        <div class="follow">
+          <h3 class="footer-header">contact</h3>
+          <ul>
+            <li>office@kuwonastudios.com</li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="legal">
+          <h3 class="footer-header">legal</h3>
+          <ul>
+            <li><a href="privacy.html">privacy policy</a></li>
+            <li><a href="terms.html">terms & conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © kuwona studios 2025
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/navigation.js"></script>
+  <script src="js/newsletter-form.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* KUWONA STUDIOS - About Page Styles */
+
+.about-intro-section {
+  margin-bottom: 60px;
+}
+
+/* Core Values Section */
+.core-values-section {
+  margin: 80px 0;
+}
+
+.core-values-section h2 {
+  margin-bottom: 40px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.value-item {
+  padding: 30px;
+  border: 1px solid #596A6A;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  border-color: #F2FBFB;
+  transform: translateY(-5px);
+}
+
+.value-item h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.value-item p {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  color: #728181;
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-intro-section p {
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.about-founders-section {
+  margin-top: 80px;
+}
+
+.page-subheader {
+  margin-bottom: 30px;
+}
+
+.page-subheader h2 {
+  margin-bottom: 15px;
+}
+
+.page-subheader h3 {
+  color: #728181;
+  font-weight: 300;
+}
+
+.about-founders-section p {
+  line-height: 1.6;
+}
+
+.contact-link {
+  color: #596A6A;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #F2FBFB;
+  opacity: 1;
+}

@@ -1,0 +1,44 @@
+/* KUWONA STUDIOS - Home Page Styles */
+
+.custom-container {
+  margin-top: 10vh;
+}
+
+.custom-header {
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1.1em;
+  margin-bottom: 40px;
+  color: #777;
+}
+
+.explore-link {
+  color: #F2FBFB;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 10px 0;
+  position: relative;
+  text-transform: lowercase;
+  transition: all 0.3s ease;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+
+.explore-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 0;
+  background-color: #F2FBFB;
+  transition: width 0.3s ease;
+}
+
+.explore-link:hover::after {
+  width: 100%;
+}
+
+.explore-link:hover {
+  opacity: 1;
+  color: #596A6A;
+}
