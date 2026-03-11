@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.disabled = true;
 
       try {
-        // Send to your API endpoint (you'll need to set this up)
-        const response = await fetch('/api/send-email', {
+        // Send to Vercel serverless function
+        const response = await fetch('https://kuwona-main-contact-form.vercel.app/api/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
