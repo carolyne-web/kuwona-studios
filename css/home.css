@@ -13,14 +13,13 @@
 
 .explore-link {
   color: #F2FBFB;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: inline-block;
   padding: 10px 0;
   position: relative;
-  text-transform: lowercase;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: 500;
 }
 
 .explore-link::after {

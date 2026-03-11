@@ -34,6 +34,7 @@ body.portfolio-page {
 .portfolio-page h2 {
   color: #001B1B;
   margin-bottom: 0;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .portfolio-item {
@@ -45,7 +46,7 @@ body.portfolio-page {
 
 .portfolio-number {
   margin-right: 10px;
-  font-size: clamp(1rem, 2vw, 1.6rem);
+  font-size: 1.1rem;
 }
 
 .site-container .portfolio-list {
@@ -54,7 +55,7 @@ body.portfolio-page {
 }
 
 .venture-name {
-  font-size: clamp(1rem, 2vw, 1.6rem);
+  font-size: 1.1rem;
   font-family: "Satoshi-Variable", sans-serif;
   color: #001B1B;
   display: inline-block;
@@ -75,7 +76,10 @@ body.portfolio-page {
 
 .venture-name a {
   color: #001B1B;
-  text-decoration: underline;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .venture-name a:hover {
@@ -83,7 +87,7 @@ body.portfolio-page {
 }
 
 .venture-name:hover {
-  font-size: clamp(1.6rem, 2.1vw, 1.7rem);
+  font-size: 1.1rem;
   color: #001B1B;
 }
 
@@ -107,6 +111,21 @@ body.portfolio-page {
   color: #001b1b;
 }
 
+/* Large Screens - Match Navigation */
+@media screen and (min-width: 1680px) {
+  .portfolio-number {
+    font-size: 1.5vw;
+  }
+
+  .venture-name {
+    font-size: 1.5vw;
+  }
+
+  .venture-name:hover {
+    font-size: 1.5vw;
+  }
+}
+
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .site-container .portfolio-list {
@@ -116,7 +135,7 @@ body.portfolio-page {
 
 @media screen and (max-width: 1024px) {
   .venture-name {
-    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    font-size: 1.1rem;
   }
 
   .venture-type {
@@ -124,7 +143,7 @@ body.portfolio-page {
   }
 
   .portfolio-number {
-    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    font-size: 1.1rem;
   }
 
   .portfolio-page p {

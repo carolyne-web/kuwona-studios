@@ -1,132 +1,225 @@
 /* KUWONA STUDIOS - Venture Page Styles */
+/* Sequoia-inspired minimal design */
 
-/* Venture Hero Section */
-.venture-hero {
-  margin: 80px 0 60px;
-  text-align: left;
-}
-
-.venture-title {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 15px;
-  text-transform: lowercase;
-}
-
-.venture-tagline {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
-  color: #728181;
-  font-weight: 300;
-  margin: 0;
-}
-
-/* Venture Details Section */
-.venture-details-section {
-  padding: 60px 0;
-  border-top: 1px solid #596A6A;
-  border-bottom: 1px solid #596A6A;
-  margin-bottom: 60px;
-}
-
-.venture-info-grid {
+/* Two Column Layout */
+.two-column-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 80px;
+}
+
+/* Left Column */
+.left-column {
+  display: flex;
+  flex-direction: column;
   gap: 40px;
 }
 
-.info-block {
-  border-bottom: 1px solid #596A6A;
-  padding-bottom: 15px;
+.company-logo {
+  flex-shrink: 0;
 }
 
-.info-label {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #728181;
-  margin-bottom: 10px;
-  font-family: 'IBM Plex Mono', monospace;
+.logo-placeholder {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #596A6A, #728181);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
   font-weight: 500;
+  color: #F2FBFB;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-.info-content {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+.venture-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: lowercase;
   color: #F2FBFB;
-  line-height: 1.6;
+}
+
+.company-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.company-intro p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: #F2FBFB;
   margin: 0;
   font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 300;
 }
 
-.info-content a {
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
   color: #F2FBFB;
-  text-decoration: underline;
+  text-decoration: none;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
   transition: color 0.3s ease;
-}
-
-.info-content a:hover {
-  color: #596A6A;
-  opacity: 1;
-}
-
-/* Coming Soon Section */
-.coming-soon-section {
-  text-align: center;
-  padding: 80px 0;
-}
-
-.coming-soon-section h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 300;
+}
+
+.social-links a:hover {
+  color: #596A6A;
+}
+
+.company-tag {
+  display: inline-block;
+  background-color: rgba(89, 106, 106, 0.15);
+  color: #728181;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+/* Right Column */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid rgba(89, 106, 106, 0.3);
+  margin: 0;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.info-item h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #728181;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.info-item p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: #F2FBFB;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.belief-section h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
   margin-bottom: 20px;
   text-transform: lowercase;
+  color: #F2FBFB;
+  font-family: 'Satoshi-Variable', sans-serif;
 }
 
-.coming-soon-section p {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+.belief-section p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: #F2FBFB;
+  margin: 0;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-weight: 300;
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.info-block h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   color: #728181;
-  max-width: 600px;
-  margin: 0 auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.info-block p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: #F2FBFB;
+  font-family: 'Satoshi-Variable', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Responsive Adjustments */
+@media (max-width: 968px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  .venture-info-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .two-column-layout {
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .left-column,
+  .right-column {
     gap: 30px;
   }
 
-  .venture-hero {
-    margin: 60px 0 40px;
-  }
-
-  .venture-details-section {
-    padding: 40px 0;
-    margin-bottom: 40px;
-  }
-
-  .coming-soon-section {
-    padding: 60px 0;
+  .logo-placeholder {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .venture-info-grid {
-    grid-template-columns: 1fr;
+  .two-column-layout {
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .left-column,
+  .right-column {
     gap: 25px;
   }
 
-  .venture-hero {
-    margin: 40px 0 30px;
+  .logo-placeholder {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
   }
 
-  .venture-details-section {
-    padding: 30px 0;
-    margin-bottom: 30px;
-  }
-
-  .coming-soon-section {
-    padding: 40px 0;
+  .company-intro {
+    gap: 15px;
   }
 }
