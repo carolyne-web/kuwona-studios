@@ -39,6 +39,11 @@ build/
 
 # Dependencies (if you add npm later)
 node_modules/
+package-lock.json
+yarn.lock
+
+# Vercel
+.vercel
 
 # Backup Files
 *.bak

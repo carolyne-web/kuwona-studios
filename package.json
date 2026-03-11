@@ -1,0 +1,17 @@
+{
+  "name": "kuwona-studios",
+  "version": "1.0.0",
+  "description": "Kuwona Studios - Empowering ventures that heal communities",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

@@ -46,6 +46,19 @@ body {
   margin: 0 auto;
 }
 
+/* Footer anchored to bottom for pages with minimal content */
+.insight-page .site-container,
+.contact-page .site-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.insight-page .site-footer,
+.contact-page .site-footer {
+  margin-top: auto;
+}
+
 h1, h2, h3 {
   font-weight: 300;
   line-height: 1.2em;
@@ -166,7 +179,8 @@ p {
   background-color: transparent;
   cursor: pointer;
   color: #F2FBFB;
-  font-family: 'Satoshi-Variable', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
 }
 
 /* ===================================
