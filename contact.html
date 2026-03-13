@@ -47,27 +47,32 @@
 
     <!-- Main Content -->
     <div class="contact-content">
-      <div class="contact-left">
-        <h1 class="contact-header">say <span class="bird" data-animate-bold>hello!</span></h1>
-        <p class="contact-intro">
-          if you're inspired by our vision and would like to learn more, we'd love to hear from you.
-          <br><br>
-          we're open to collaboration with founders, entrepreneurs, and visionaries building ventures that align with our values.
-          <br><br>
-          whether you're seeking partnership, investment, or strategic guidance, reach out and let's explore how we can work together to create lasting impact.
-        </p>
-      </div>
+      <div class="contact-content-wrapper">
+        <div class="contact-left">
+          <h1 class="contact-header">say <span class="bird" data-animate-bold>hi.
 
-      <div class="contact-right">
+          </span></h1>
+          <p class="contact-intro">
+            if you're inspired by our vision and would like to learn more, we'd love to hear from you.
+            <br><br>
+            we're open to collaboration with founders, entrepreneurs, and visionaries building ventures that align with our values.
+            <br><br>
+            whether you're seeking partnership, investment, or strategic guidance, reach out and let's explore how we can work together to create lasting impact.
+          </p>
+        </div>
+
+        <div class="contact-right">
         <form class="contact-form" id="contact-form" name="contact-form">
-          <div class="form-group">
-            <label for="name">name*</label>
-            <input type="text" id="name" name="name" required>
-          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">name*</label>
+              <input type="text" id="name" name="name" required>
+            </div>
 
-          <div class="form-group">
-            <label for="email">email*</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+              <label for="email">email*</label>
+              <input type="email" id="email" name="email" required>
+            </div>
           </div>
 
           <div class="form-group">
@@ -77,24 +82,26 @@
 
           <div class="form-group">
             <label for="message">message*</label>
-            <textarea id="message" name="message" rows="8" required></textarea>
+            <textarea id="message" name="message" rows="3" required></textarea>
           </div>
 
-          <div class="form-group checkbox-group">
-            <label>
-              <input type="checkbox" name="newsletter" value="yes">
-              <span>sign up to newsletter</span>
-            </label>
-          </div>
+          <div class="form-footer">
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" name="newsletter" value="yes">
+                <span>sign up to newsletter</span>
+              </label>
+            </div>
 
-          <button type="submit" class="contact-submit-button">
-            <span class="button-text">submit</span>
-            <span class="button-sending" style="display: none;">sending...</span>
-            <span class="button-success" style="display: none;">message received</span>
-          </button>
+            <button type="submit" class="contact-submit-button">
+              <span class="button-text">submit</span>
+              <span class="button-sending" style="display: none;">sending...</span>
+              <span class="button-success" style="display: none;">message received</span>
+            </button>
+          </div>
         </form>
       </div>
-    </div>
+      </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -127,6 +134,7 @@
         © kuwona 2025
       </div>
     </footer>
+    </div>
 
   </div>
 

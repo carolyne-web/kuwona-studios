@@ -42,21 +42,46 @@ body {
 .site-container {
   line-height: 1.6em;
   color: #F2FBFB;
-  padding: 2vw 5vw;
+  padding: 2vw 5vw 0;
   margin: 0 auto;
 }
 
 /* Footer anchored to bottom for pages with minimal content */
+.home-page .site-container,
 .insight-page .site-container,
 .contact-page .site-container {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
 }
 
+.home-page .site-footer,
 .insight-page .site-footer,
 .contact-page .site-footer {
   margin-top: auto;
+}
+
+.insight-page .custom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 91vh;
+}
+
+.portfolio-page .custom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
+}
+
+.about-page .site-footer {
+  margin-top: 5vw;
+  padding-bottom: 1vw;
+}
+
+.portfolio-page .site-footer {
+  padding-bottom: 1vw;
 }
 
 h1, h2, h3 {
@@ -196,8 +221,7 @@ p {
 
 .site-footer {
   font-weight: 300;
-  margin-top: 6vw;
-  margin-bottom: 1vw;
+  margin-top: 2vw;
   line-height: 1.2em;
   color: #F2FBFB;
   font-family: "Satoshi-Variable", sans-serif;
@@ -503,7 +527,6 @@ form button {
 @media (min-width: 769px) and (max-width: 1919px) {
   .custom-header {
     font-size: clamp(3.5rem, 7vw, 6rem);
-    line-height: 1em;
   }
 
   h1 {
