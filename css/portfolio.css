@@ -6,7 +6,7 @@ body.portfolio-page {
 
 .portfolio-header {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 30px;
+  margin-bottom: 10vw;
   font-weight: 300;
   color: #001B1B;
 }
