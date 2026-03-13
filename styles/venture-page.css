@@ -41,6 +41,8 @@ body#collection-66757d0dcb3bd378d782c59c{
   min-height: 80vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
 }
 
 #collection-66757d0dcb3bd378d782c59c .site-navigation-item a:hover {
