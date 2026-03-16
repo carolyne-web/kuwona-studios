@@ -46,13 +46,18 @@ export default async function handler(req, res) {
     `;
 
     // Send email using Resend
+    console.log('Attempting to send email...');
+    console.log('API Key exists:', !!process.env.RESEND_API_KEY);
+
     const data = await resend.emails.send({
-      from: 'Kuwona Contact Form <contact@kuwonastudios.com>', // Update with your verified domain
+      from: 'Kuwona Contact Form <onboarding@resend.dev>', // Using Resend's verified domain for now
       to: ['info@kuwonastudios.com'], // Your email address
       replyTo: email, // User's email for easy replies
       subject: `New Contact Form Submission from ${name}`,
       html: emailContent,
     });
+
+    console.log('Email sent successfully:', data);
 
     // If newsletter signup is checked, you can add them to your mailing list
     // This would require additional Resend audience API calls or integration with your email service
@@ -64,9 +69,15 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', JSON.stringify(error, null, 2));
+
     return res.status(500).json({
       error: 'Failed to send email',
-      details: error.message
+      details: error.message,
+      debug: {
+        hasApiKey: !!process.env.RESEND_API_KEY,
+        errorType: error.constructor.name
+      }
     });
   }
 }
