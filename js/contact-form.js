@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       try {
         // Send to Vercel serverless function
-        const response = await fetch('https://kuwona-main-contact-form.vercel.app/api/send-email', {
+        const response = await fetch('https://kuwona-studios.vercel.app/api/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
