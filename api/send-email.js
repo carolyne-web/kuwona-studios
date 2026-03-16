@@ -5,6 +5,13 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Log initialization (only runs on cold start)
+if (!process.env.RESEND_API_KEY) {
+  console.error('CRITICAL: RESEND_API_KEY is not set!');
+} else {
+  console.log('Resend initialized with API key');
+}
+
 export default async function handler(req, res) {
   // Add CORS headers to allow requests from GitHub Pages
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -28,8 +35,12 @@ export default async function handler(req, res) {
   try {
     const { name, email, hearAbout, message, newsletter } = req.body;
 
+    // Log the request
+    console.log('Received form submission:', { name, email, hasMessage: !!message });
+
     // Validate required fields
     if (!name || !email || !message) {
+      console.log('Validation failed - missing fields');
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -50,10 +61,10 @@ export default async function handler(req, res) {
     console.log('API Key exists:', !!process.env.RESEND_API_KEY);
 
     const data = await resend.emails.send({
-      from: 'Kuwona Contact Form <onboarding@resend.dev>', // Using Resend's verified domain for now
-      to: ['info@kuwonastudios.com'], // Your email address
+      from: 'Kuwona <onboarding@resend.dev>', // Using Resend's verified domain
+      to: ['carolyne@kuwonastudios.com'], // Match working setup
       replyTo: email, // User's email for easy replies
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New Contact Form Submission from ${name} | Kuwona Studios`,
       html: emailContent,
     });
 
