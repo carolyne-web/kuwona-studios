@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Show success message
           const successMsg = document.createElement('div');
           successMsg.className = 'newsletter-success';
-          successMsg.textContent = "you're in! check your inbox for confirmation.";
+          successMsg.textContent = "thank you! you're subscribed to our newsletter.";
           form.parentNode.insertBefore(successMsg, form.nextSibling);
 
           form.reset();

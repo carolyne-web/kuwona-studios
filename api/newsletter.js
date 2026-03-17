@@ -73,6 +73,26 @@ export default async function handler(req, res) {
     // Step 2: Update profile with name information if provided
     if (name && firstName) {
       try {
+        // Wait a bit for the subscription to process
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        const profileAttributes = {
+          email: email
+        };
+
+        // Add name properties using Klaviyo's special property names
+        const properties = {
+          '$first_name': firstName
+        };
+
+        if (lastName) {
+          properties['$last_name'] = lastName;
+        }
+
+        profileAttributes.properties = properties;
+
+        console.log('Updating Klaviyo profile with:', JSON.stringify(profileAttributes, null, 2));
+
         const profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
           method: 'POST',
           headers: {
@@ -83,18 +103,17 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             data: {
               type: 'profile',
-              attributes: {
-                email: email,
-                first_name: firstName,
-                ...(lastName && { last_name: lastName })
-              }
+              attributes: profileAttributes
             }
           })
         });
 
+        const responseText = await profileUpdateResponse.text();
+
         if (!profileUpdateResponse.ok) {
-          const errorText = await profileUpdateResponse.text();
-          console.error('Klaviyo profile update error:', errorText);
+          console.error('Klaviyo profile update error:', profileUpdateResponse.status, responseText);
+        } else {
+          console.log('Klaviyo profile update success:', responseText);
         }
       } catch (profileError) {
         console.error('Error updating profile with name:', profileError);
