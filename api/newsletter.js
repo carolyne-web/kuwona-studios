@@ -29,23 +29,7 @@ export default async function handler(req, res) {
     const firstName = name ? name.trim().split(' ')[0] : '';
     const lastName = name ? name.trim().split(' ').slice(1).join(' ') : '';
 
-    // Build profile attributes
-    const profileAttributes = {
-      email: email
-    };
-
-    // Add properties object with name fields if name is provided
-    if (name && firstName) {
-      profileAttributes.properties = {
-        first_name: firstName
-      };
-
-      if (lastName) {
-        profileAttributes.properties.last_name = lastName;
-      }
-    }
-
-    // Use Klaviyo's bulk subscription endpoint
+    // Step 1: Subscribe to list with email only
     const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
       method: 'POST',
       headers: {
@@ -61,7 +45,9 @@ export default async function handler(req, res) {
               data: [
                 {
                   type: 'profile',
-                  attributes: profileAttributes
+                  attributes: {
+                    email: email
+                  }
                 }
               ]
             }
@@ -82,6 +68,37 @@ export default async function handler(req, res) {
       const errorText = await klaviyoResponse.text();
       console.error('Klaviyo API error:', errorText);
       throw new Error(`Klaviyo API returned ${klaviyoResponse.status}: ${errorText}`);
+    }
+
+    // Step 2: Update profile with name information if provided
+    if (name && firstName) {
+      try {
+        const profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
+            'Content-Type': 'application/json',
+            'revision': '2024-10-15'
+          },
+          body: JSON.stringify({
+            data: {
+              type: 'profile',
+              attributes: {
+                email: email,
+                first_name: firstName,
+                ...(lastName && { last_name: lastName })
+              }
+            }
+          })
+        });
+
+        if (!profileUpdateResponse.ok) {
+          const errorText = await profileUpdateResponse.text();
+          console.error('Klaviyo profile update error:', errorText);
+        }
+      } catch (profileError) {
+        console.error('Error updating profile with name:', profileError);
+      }
     }
 
     return res.status(200).json({

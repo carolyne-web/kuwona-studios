@@ -61,24 +61,7 @@ export default async function handler(req, res) {
         const firstName = name.trim().split(' ')[0];
         const lastName = name.trim().split(' ').slice(1).join(' ');
 
-        // Build profile attributes with properties
-        const profileAttributes = {
-          email: email,
-          properties: {
-            first_name: firstName,
-            'Signed Up From': 'Contact Form'
-          }
-        };
-
-        if (lastName) {
-          profileAttributes.properties.last_name = lastName;
-        }
-
-        if (hearAbout) {
-          profileAttributes.properties['How Heard About Us'] = hearAbout;
-        }
-
-        // Subscribe to Klaviyo list using REST API
+        // Step 1: Subscribe to list with email only
         const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
           method: 'POST',
           headers: {
@@ -94,7 +77,9 @@ export default async function handler(req, res) {
                   data: [
                     {
                       type: 'profile',
-                      attributes: profileAttributes
+                      attributes: {
+                        email: email
+                      }
                     }
                   ]
                 }
@@ -114,6 +99,43 @@ export default async function handler(req, res) {
         if (!klaviyoResponse.ok) {
           const errorText = await klaviyoResponse.text();
           console.error('Klaviyo subscription error:', errorText);
+        }
+
+        // Step 2: Update profile with name and custom properties
+        const profileData = {
+          type: 'profile',
+          attributes: {
+            email: email,
+            first_name: firstName,
+            properties: {
+              'Signed Up From': 'Contact Form'
+            }
+          }
+        };
+
+        if (lastName) {
+          profileData.attributes.last_name = lastName;
+        }
+
+        if (hearAbout) {
+          profileData.attributes.properties['How Heard About Us'] = hearAbout;
+        }
+
+        const profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
+            'Content-Type': 'application/json',
+            'revision': '2024-10-15'
+          },
+          body: JSON.stringify({
+            data: profileData
+          })
+        });
+
+        if (!profileUpdateResponse.ok) {
+          const errorText = await profileUpdateResponse.text();
+          console.error('Klaviyo profile update error:', errorText);
         }
       } catch (klaviyoError) {
         // Log Klaviyo error but don't fail the whole request
