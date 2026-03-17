@@ -8,8 +8,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "resend": "^3.2.0",
-    "klaviyo-api": "^9.0.0"
+    "resend": "^3.2.0"
   },
   "devDependencies": {
     "vercel": "^33.0.0"

@@ -2,13 +2,8 @@
 // This function handles contact form submissions
 
 import { Resend } from 'resend';
-import { ApiKeySession, ProfilesApi } from 'klaviyo-api';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
-// Initialize Klaviyo
-const klaviyoSession = new ApiKeySession(process.env.KLAVIYO_PRIVATE_API_KEY);
-const profilesApi = new ProfilesApi(klaviyoSession);
 
 export default async function handler(req, res) {
   // Add CORS headers to allow requests from GitHub Pages
@@ -62,47 +57,64 @@ export default async function handler(req, res) {
     // Add to Klaviyo newsletter list if newsletter signup is checked
     if (newsletter) {
       try {
-        await profilesApi.subscribeProfiles({
-          data: {
-            type: 'profile-subscription-bulk-create-job',
-            attributes: {
-              list_id: 'U7rH4d',
-              subscriptions: [
-                {
-                  email: email,
-                  phone_number: null,
-                  channels: {
-                    email: ['MARKETING']
+        // Parse name into first and last name
+        const firstName = name.trim().split(' ')[0];
+        const lastName = name.trim().split(' ').slice(1).join(' ');
+
+        // Build profile attributes with properties
+        const profileAttributes = {
+          email: email,
+          properties: {
+            first_name: firstName,
+            'Signed Up From': 'Contact Form'
+          }
+        };
+
+        if (lastName) {
+          profileAttributes.properties.last_name = lastName;
+        }
+
+        if (hearAbout) {
+          profileAttributes.properties['How Heard About Us'] = hearAbout;
+        }
+
+        // Subscribe to Klaviyo list using REST API
+        const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
+            'Content-Type': 'application/json',
+            'revision': '2024-10-15'
+          },
+          body: JSON.stringify({
+            data: {
+              type: 'profile-subscription-bulk-create-job',
+              attributes: {
+                profiles: {
+                  data: [
+                    {
+                      type: 'profile',
+                      attributes: profileAttributes
+                    }
+                  ]
+                }
+              },
+              relationships: {
+                list: {
+                  data: {
+                    type: 'list',
+                    id: 'U7rH4d'
                   }
                 }
-              ]
-            },
-            relationships: {
-              list: {
-                data: {
-                  type: 'list',
-                  id: 'U7rH4d'
-                }
               }
             }
-          }
+          })
         });
 
-        // Also create/update profile with additional info
-        await profilesApi.createOrUpdateProfile({
-          data: {
-            type: 'profile',
-            attributes: {
-              email: email,
-              first_name: name.split(' ')[0],
-              last_name: name.split(' ').slice(1).join(' ') || '',
-              properties: {
-                'Signed Up From': 'Contact Form',
-                'How Heard About Us': hearAbout || 'Not specified'
-              }
-            }
-          }
-        });
+        if (!klaviyoResponse.ok) {
+          const errorText = await klaviyoResponse.text();
+          console.error('Klaviyo subscription error:', errorText);
+        }
       } catch (klaviyoError) {
         // Log Klaviyo error but don't fail the whole request
         console.error('Klaviyo subscription error:', klaviyoError);
