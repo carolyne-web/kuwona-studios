@@ -105,18 +105,25 @@ export default async function handler(req, res) {
         // Wait a bit for the subscription to process
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        const properties = {
-          '$first_name': firstName,
-          'Signed Up From': 'Contact Form'
+        const profileAttributes = {
+          email: email,
+          first_name: firstName
         };
 
         if (lastName) {
-          properties['$last_name'] = lastName;
+          profileAttributes.last_name = lastName;
         }
 
+        // Custom properties
+        const customProperties = {
+          'Signed Up From': 'Contact Form'
+        };
+
         if (hearAbout) {
-          properties['How Heard About Us'] = hearAbout;
+          customProperties['How Heard About Us'] = hearAbout;
         }
+
+        profileAttributes.properties = customProperties;
 
         const profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
           method: 'POST',
@@ -128,10 +135,7 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             data: {
               type: 'profile',
-              attributes: {
-                email: email,
-                properties: properties
-              }
+              attributes: profileAttributes
             }
           })
         });

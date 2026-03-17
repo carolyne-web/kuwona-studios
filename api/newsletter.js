@@ -77,19 +77,13 @@ export default async function handler(req, res) {
         await new Promise(resolve => setTimeout(resolve, 1000));
 
         const profileAttributes = {
-          email: email
-        };
-
-        // Add name properties using Klaviyo's special property names
-        const properties = {
-          '$first_name': firstName
+          email: email,
+          first_name: firstName
         };
 
         if (lastName) {
-          properties['$last_name'] = lastName;
+          profileAttributes.last_name = lastName;
         }
-
-        profileAttributes.properties = properties;
 
         console.log('Updating Klaviyo profile with:', JSON.stringify(profileAttributes, null, 2));
 
