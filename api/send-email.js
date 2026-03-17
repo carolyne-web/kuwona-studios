@@ -102,23 +102,20 @@ export default async function handler(req, res) {
         }
 
         // Step 2: Update profile with name and custom properties
-        const profileData = {
-          type: 'profile',
-          attributes: {
-            email: email,
-            first_name: firstName,
-            properties: {
-              'Signed Up From': 'Contact Form'
-            }
-          }
+        // Wait a bit for the subscription to process
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        const properties = {
+          '$first_name': firstName,
+          'Signed Up From': 'Contact Form'
         };
 
         if (lastName) {
-          profileData.attributes.last_name = lastName;
+          properties['$last_name'] = lastName;
         }
 
         if (hearAbout) {
-          profileData.attributes.properties['How Heard About Us'] = hearAbout;
+          properties['How Heard About Us'] = hearAbout;
         }
 
         const profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
@@ -129,7 +126,13 @@ export default async function handler(req, res) {
             'revision': '2024-10-15'
           },
           body: JSON.stringify({
-            data: profileData
+            data: {
+              type: 'profile',
+              attributes: {
+                email: email,
+                properties: properties
+              }
+            }
           })
         });
 
