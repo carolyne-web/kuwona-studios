@@ -5,13 +5,6 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Log initialization (only runs on cold start)
-if (!process.env.RESEND_API_KEY) {
-  console.error('CRITICAL: RESEND_API_KEY is not set!');
-} else {
-  console.log('Resend initialized with API key');
-}
-
 export default async function handler(req, res) {
   // Add CORS headers to allow requests from GitHub Pages
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -35,12 +28,8 @@ export default async function handler(req, res) {
   try {
     const { name, email, hearAbout, message, newsletter } = req.body;
 
-    // Log the request
-    console.log('Received form submission:', { name, email, hasMessage: !!message });
-
     // Validate required fields
     if (!name || !email || !message) {
-      console.log('Validation failed - missing fields');
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -57,18 +46,13 @@ export default async function handler(req, res) {
     `;
 
     // Send email using Resend
-    console.log('Attempting to send email...');
-    console.log('API Key exists:', !!process.env.RESEND_API_KEY);
-
     const data = await resend.emails.send({
-      from: 'Kuwona <onboarding@resend.dev>', // Using Resend's verified domain
-      to: ['carolyne@kuwonastudios.com'], // Match working setup
-      replyTo: email, // User's email for easy replies
+      from: 'Kuwona <onboarding@resend.dev>',
+      to: ['carolyne@kuwonastudios.com'],
+      replyTo: email,
       subject: `New Contact Form Submission from ${name} | Kuwona Studios`,
       html: emailContent,
     });
-
-    console.log('Email sent successfully:', data);
 
     // If newsletter signup is checked, you can add them to your mailing list
     // This would require additional Resend audience API calls or integration with your email service
@@ -80,15 +64,10 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Error sending email:', error);
-    console.error('Error details:', JSON.stringify(error, null, 2));
 
     return res.status(500).json({
       error: 'Failed to send email',
-      details: error.message,
-      debug: {
-        hasApiKey: !!process.env.RESEND_API_KEY,
-        errorType: error.constructor.name
-      }
+      details: error.message
     });
   }
 }
