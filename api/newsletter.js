@@ -82,7 +82,12 @@ export default async function handler(req, res) {
     console.error('Newsletter subscription error:', error);
     return res.status(500).json({
       error: 'Failed to subscribe',
-      details: error.message
+      details: error.message,
+      debug: {
+        hasApiKey: !!process.env.KLAVIYO_PRIVATE_API_KEY,
+        errorType: error.constructor.name,
+        stack: error.stack
+      }
     });
   }
 }

@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
           alert("Thank you! You've been subscribed to our newsletter.");
           form.reset();
         } else {
-          throw new Error('Failed to subscribe');
+          const errorData = await response.json();
+          console.error('Subscription error details:', errorData);
+          throw new Error(errorData.details || 'Failed to subscribe');
         }
       } catch (error) {
         console.error('Error!', error.message);
