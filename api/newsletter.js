@@ -87,7 +87,8 @@ export default async function handler(req, res) {
 
         console.log('Updating Klaviyo profile with:', JSON.stringify(profileAttributes, null, 2));
 
-        const profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
+        // Try POST first (create or get existing)
+        let profileUpdateResponse = await fetch('https://a.klaviyo.com/api/profiles/', {
           method: 'POST',
           headers: {
             'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
@@ -103,11 +104,35 @@ export default async function handler(req, res) {
         });
 
         const responseText = await profileUpdateResponse.text();
+        console.log('Profile API response:', profileUpdateResponse.status, responseText);
 
-        if (!profileUpdateResponse.ok) {
-          console.error('Klaviyo profile update error:', profileUpdateResponse.status, responseText);
-        } else {
-          console.log('Klaviyo profile update success:', responseText);
+        // If we get a 409 conflict (profile exists), extract the profile ID and use PATCH
+        if (profileUpdateResponse.status === 409) {
+          const errorData = JSON.parse(responseText);
+          const profileId = errorData.errors[0]?.meta?.duplicate_profile_id;
+
+          if (profileId) {
+            console.log('Profile exists, updating with PATCH:', profileId);
+
+            profileUpdateResponse = await fetch(`https://a.klaviyo.com/api/profiles/${profileId}`, {
+              method: 'PATCH',
+              headers: {
+                'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
+                'Content-Type': 'application/json',
+                'revision': '2024-10-15'
+              },
+              body: JSON.stringify({
+                data: {
+                  type: 'profile',
+                  id: profileId,
+                  attributes: profileAttributes
+                }
+              })
+            });
+
+            const patchResponseText = await profileUpdateResponse.text();
+            console.log('PATCH response:', profileUpdateResponse.status, patchResponseText);
+          }
         }
       } catch (profileError) {
         console.error('Error updating profile with name:', profileError);
