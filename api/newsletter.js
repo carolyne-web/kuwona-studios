@@ -28,8 +28,8 @@ export default async function handler(req, res) {
     const firstName = name ? name.split(' ')[0] : '';
     const lastName = name ? name.split(' ').slice(1).join(' ') : '';
 
-    // Use Klaviyo REST API directly with correct structure
-    const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
+    // Use Klaviyo's Subscribe Profiles endpoint
+    const klaviyoResponse = await fetch('https://a.klaviyo.com/api/lists/U7rH4d/subscribe', {
       method: 'POST',
       headers: {
         'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
@@ -38,26 +38,16 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         data: {
-          type: 'profile-subscription-bulk-create-job',
+          type: 'subscription',
           attributes: {
-            profiles: {
-              data: [
-                {
-                  type: 'profile',
-                  attributes: {
-                    email: email,
-                    ...(firstName && { first_name: firstName }),
-                    ...(lastName && { last_name: lastName })
-                  }
-                }
-              ]
-            }
-          },
-          relationships: {
-            list: {
+            profile: {
               data: {
-                type: 'list',
-                id: 'U7rH4d'
+                type: 'profile',
+                attributes: {
+                  email: email,
+                  ...(firstName && { first_name: firstName }),
+                  ...(lastName && { last_name: lastName })
+                }
               }
             }
           }
