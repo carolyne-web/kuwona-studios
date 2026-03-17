@@ -1,8 +1,4 @@
 // Newsletter subscription API endpoint
-import { ApiKeySession, ProfilesApi } from 'klaviyo-api';
-
-const klaviyoSession = new ApiKeySession(process.env.KLAVIYO_PRIVATE_API_KEY);
-const profilesApi = new ProfilesApi(klaviyoSession);
 
 export default async function handler(req, res) {
   // Add CORS headers
@@ -29,48 +25,40 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email is required' });
     }
 
-    // Subscribe to Klaviyo list
-    await profilesApi.subscribeProfiles({
-      data: {
-        type: 'profile-subscription-bulk-create-job',
-        attributes: {
-          list_id: 'U7rH4d',
-          subscriptions: [
-            {
-              email: email,
-              phone_number: null,
-              channels: {
-                email: ['MARKETING']
+    const firstName = name ? name.split(' ')[0] : '';
+    const lastName = name ? name.split(' ').slice(1).join(' ') : '';
+
+    // Use Klaviyo REST API directly
+    const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
+        'Content-Type': 'application/json',
+        'revision': '2024-10-15'
+      },
+      body: JSON.stringify({
+        data: {
+          type: 'profile-subscription-bulk-create-job',
+          attributes: {
+            list_id: 'U7rH4d',
+            subscriptions: [
+              {
+                email: email,
+                ...(firstName && {
+                  first_name: firstName,
+                  ...(lastName && { last_name: lastName })
+                })
               }
-            }
-          ]
-        },
-        relationships: {
-          list: {
-            data: {
-              type: 'list',
-              id: 'U7rH4d'
-            }
+            ]
           }
         }
-      }
+      })
     });
 
-    // Create/update profile with name if provided
-    if (name) {
-      await profilesApi.createOrUpdateProfile({
-        data: {
-          type: 'profile',
-          attributes: {
-            email: email,
-            first_name: name.split(' ')[0],
-            last_name: name.split(' ').slice(1).join(' ') || '',
-            properties: {
-              'Signed Up From': 'Newsletter Footer'
-            }
-          }
-        }
-      });
+    if (!klaviyoResponse.ok) {
+      const errorText = await klaviyoResponse.text();
+      console.error('Klaviyo API error:', errorText);
+      throw new Error(`Klaviyo API returned ${klaviyoResponse.status}: ${errorText}`);
     }
 
     return res.status(200).json({
