@@ -25,11 +25,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email is required' });
     }
 
-    const firstName = name ? name.split(' ')[0] : '';
-    const lastName = name ? name.split(' ').slice(1).join(' ') : '';
-
-    // Use Klaviyo's Subscribe Profiles endpoint
-    const klaviyoResponse = await fetch('https://a.klaviyo.com/api/lists/U7rH4d/subscribe', {
+    // Use Klaviyo's bulk subscription endpoint - email only
+    const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
       method: 'POST',
       headers: {
         'Authorization': `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_API_KEY}`,
@@ -38,16 +35,24 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         data: {
-          type: 'subscription',
+          type: 'profile-subscription-bulk-create-job',
           attributes: {
-            profile: {
-              data: {
-                type: 'profile',
-                attributes: {
-                  email: email,
-                  ...(firstName && { first_name: firstName }),
-                  ...(lastName && { last_name: lastName })
+            profiles: {
+              data: [
+                {
+                  type: 'profile',
+                  attributes: {
+                    email: email
+                  }
                 }
+              ]
+            }
+          },
+          relationships: {
+            list: {
+              data: {
+                type: 'list',
+                id: 'U7rH4d'
               }
             }
           }
