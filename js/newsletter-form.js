@@ -27,8 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         if (response.ok) {
-          alert("Thank you! You've been subscribed to our newsletter.");
+          // Show success message
+          const successMsg = document.createElement('div');
+          successMsg.className = 'newsletter-success';
+          successMsg.textContent = "you're in! check your inbox for confirmation.";
+          form.parentNode.insertBefore(successMsg, form.nextSibling);
+
           form.reset();
+
+          // Remove success message after 5 seconds
+          setTimeout(() => {
+            successMsg.remove();
+          }, 5000);
         } else {
           const errorData = await response.json();
           console.error('Subscription error details:', errorData);
@@ -36,7 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       } catch (error) {
         console.error('Error!', error.message);
-        alert("Sorry, there was an error. Please try again.");
+
+        // Show error message
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'newsletter-error';
+        errorMsg.textContent = "oops, something went wrong. please try again.";
+        form.parentNode.insertBefore(errorMsg, form.nextSibling);
+
+        // Remove error message after 5 seconds
+        setTimeout(() => {
+          errorMsg.remove();
+        }, 5000);
       } finally {
         // Re-enable submit button
         submitButton.disabled = false;

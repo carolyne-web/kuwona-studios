@@ -25,7 +25,27 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Email is required' });
     }
 
-    // Use Klaviyo's bulk subscription endpoint - email only
+    // Parse name into first and last name
+    const firstName = name ? name.trim().split(' ')[0] : '';
+    const lastName = name ? name.trim().split(' ').slice(1).join(' ') : '';
+
+    // Build profile attributes
+    const profileAttributes = {
+      email: email
+    };
+
+    // Add properties object with name fields if name is provided
+    if (name && firstName) {
+      profileAttributes.properties = {
+        first_name: firstName
+      };
+
+      if (lastName) {
+        profileAttributes.properties.last_name = lastName;
+      }
+    }
+
+    // Use Klaviyo's bulk subscription endpoint
     const klaviyoResponse = await fetch('https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/', {
       method: 'POST',
       headers: {
@@ -41,9 +61,7 @@ export default async function handler(req, res) {
               data: [
                 {
                   type: 'profile',
-                  attributes: {
-                    email: email
-                  }
+                  attributes: profileAttributes
                 }
               ]
             }
