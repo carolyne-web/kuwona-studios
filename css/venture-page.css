@@ -171,6 +171,26 @@
   margin: 0;
 }
 
+/* Back Navigation */
+.back-nav {
+  margin-bottom: 40px;
+}
+
+.back-button {
+  display: inline-block;
+  color: #728181;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #F2FBFB;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 968px) {
   .two-column-layout {
