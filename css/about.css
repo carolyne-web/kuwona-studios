@@ -249,6 +249,11 @@
   position: relative;
 }
 
+.name-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .first-name,
 .last-name {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -269,6 +274,11 @@
 
 [data-position="right"] .team-member-name {
   text-align: right;
+}
+
+/* Hide mobile arrow on desktop */
+.team-member-cta-mobile {
+  display: none;
 }
 
 /* Details Row */
@@ -371,14 +381,17 @@
     align-items: flex-start !important;
   }
 
-  .team-member-info {
-    display: flex;
-    flex-direction: column;
-  }
-
   .team-member-name {
     text-align: left !important;
-    order: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .name-text {
+    flex: 1;
   }
 
   .first-name,
@@ -386,18 +399,27 @@
     font-size: clamp(2rem, 8vw, 2.5rem);
   }
 
-  .team-member-details {
-    flex-direction: row !important;
-    gap: 16px;
-    order: 0;
-    align-items: center;
-    margin-bottom: 16px;
+  /* Show mobile arrow, hide desktop arrow */
+  .team-member-cta-mobile {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
   }
 
-  .team-member-cta {
-    width: 60px;
-    height: 60px;
-    order: 0;
+  .team-member-cta-mobile .arrow-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .team-member-cta-desktop {
+    display: none;
+  }
+
+  .team-member-details {
+    flex-direction: column !important;
+    gap: 0;
+    align-items: flex-start;
   }
 
   /* Add touch interaction for mobile */
@@ -412,15 +434,6 @@
   .team-member-cta.active .arrow-icon {
     color: #F2FBFB;
     transform: rotate(-45deg);
-  }
-
-  .team-member-bio {
-    order: 1;
-  }
-
-  .arrow-icon {
-    width: 18px;
-    height: 18px;
   }
 
   .team-member-bio {
