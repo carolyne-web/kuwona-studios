@@ -487,7 +487,6 @@ form button {
     margin: 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(0, 27, 27, 0.85);
     padding-top: 50%;
     z-index: 99999;
   }
