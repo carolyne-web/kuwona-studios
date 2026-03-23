@@ -278,11 +278,11 @@
 
 /* Desktop: Hide mobile arrow, show desktop arrow */
 .team-member-cta-mobile {
-  display: none;
+  display: none !important;
 }
 
 .team-member-cta-desktop {
-  display: flex;
+  display: flex !important;
 }
 
 /* Details Row */
@@ -405,7 +405,7 @@
 
   /* Show mobile arrow, hide desktop arrow */
   .team-member-cta-mobile {
-    display: flex;
+    display: flex !important;
     width: 50px;
     height: 50px;
     flex-shrink: 0;
@@ -417,7 +417,7 @@
   }
 
   .team-member-cta-desktop {
-    display: none;
+    display: none !important;
   }
 
   .team-member-details {
@@ -428,13 +428,18 @@
 
   /* Add touch interaction for mobile */
   .team-member-cta:active,
+  .team-member-cta:focus,
+  .team-member-cta:focus-visible,
   .team-member-cta.active {
     border-color: #596A6A;
     background-color: rgba(89, 106, 106, 0.1);
     transform: scale(1.1);
+    outline: none;
   }
 
   .team-member-cta:active .arrow-icon,
+  .team-member-cta:focus .arrow-icon,
+  .team-member-cta:focus-visible .arrow-icon,
   .team-member-cta.active .arrow-icon {
     color: #F2FBFB;
     transform: rotate(-45deg);

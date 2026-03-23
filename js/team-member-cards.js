@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       setTimeout(() => {
         this.classList.remove('active');
-      }, 300);
+      }, 400);
 
       // You can add functionality here, for example:
       // - Open a modal with more info
