@@ -276,9 +276,13 @@
   text-align: right;
 }
 
-/* Hide mobile arrow on desktop */
+/* Desktop: Hide mobile arrow, show desktop arrow */
 .team-member-cta-mobile {
   display: none;
+}
+
+.team-member-cta-desktop {
+  display: flex;
 }
 
 /* Details Row */
