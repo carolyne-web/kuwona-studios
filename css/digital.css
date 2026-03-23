@@ -355,11 +355,11 @@ body.digital-page p {
 
 .info-label {
   font-size: 12px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 1px;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 500;
 }
 

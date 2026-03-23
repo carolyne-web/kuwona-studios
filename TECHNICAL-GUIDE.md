@@ -537,7 +537,7 @@ fetch(scriptURL, {
    solutions.
 
    OUR VENTURES:
-   🔹 Kuwona Digital - Digital solutions & marketing consultancy
+   🔹 Kuwona Digital - custom software and automation to solve business inefficiencies
    🔹 Parabl - Online bookstore (Coming 2025)
    🔹 MyCommunity MyPeople - Community platform (In development)
 
@@ -620,7 +620,7 @@ At Kuwona Studios, we dare to believe in a better world—one where empowering
 ideas drive positive change, heal communities, and foster a culture that cares.
 
 🚀 CURRENT VENTURES:
-• Kuwona Digital - Digital solutions & marketing consultancy
+• Kuwona Digital - custom software and automation to solve business inefficiencies
 • [Other ventures in development]
 
 ✨ CORE VALUES:

@@ -4,7 +4,6 @@
 /* ===================================
    FONT IMPORTS
    =================================== */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
 
 /* ===================================
    FONT FACES
@@ -126,8 +125,8 @@ p {
 }
 
 .site-navigation #logo {
-  font-family: 'IBM Plex Mono', monospace;
-  text-transform: uppercase;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
   font-weight: 400;
 }
 
@@ -146,12 +145,13 @@ p {
 
 .site-navigation-item {
   display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   margin-left: 1em;
+  text-transform: lowercase;
 }
 
 .site-navigation-item a {
-  text-transform: uppercase;
+  text-transform: lowercase;
   padding: 5px 0;
   position: relative;
   z-index: 1;
@@ -167,7 +167,7 @@ p {
   background-size: 200% 100%;
   background-position: -100%;
   transition: all 0.3s ease-in-out;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 300;
 }
 
@@ -211,8 +211,8 @@ p {
   background-color: transparent;
   cursor: pointer;
   color: #F2FBFB;
-  font-family: 'IBM Plex Mono', monospace;
-  text-transform: uppercase;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
 }
 
 /* ===================================
@@ -267,14 +267,14 @@ p {
 }
 
 .footer-header {
-  font-family: 'IBM Plex Mono', monospace;
-  text-transform: uppercase;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
 }
 
 .footer-bottom {
   margin-top: 2em;
-  font-family: 'IBM Plex Mono', monospace;
-  text-transform: uppercase;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
   font-size: .9rem;
 }
 
@@ -303,8 +303,9 @@ form input[type="email"] {
   padding: 5px 0px;
   margin-bottom: 10px;
   width: 200px;
-  font-family: 'IBM Plex Mono', monospace;
-  text-transform: uppercase;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
+  font-size: 1rem;
 }
 
 form input[type="text"]:hover,
@@ -324,9 +325,10 @@ form button {
   border: none;
   padding: 5px;
   cursor: pointer;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 500;
   transition: all 0.3s ease;
+  text-transform: lowercase;
 }
 
 .form-submit-button {
@@ -352,7 +354,7 @@ form button {
 /* Newsletter Success/Error Messages */
 .newsletter-success,
 .newsletter-error {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   font-size: 0.85rem;
   padding: 10px 0;
   margin-top: 10px;
@@ -450,7 +452,7 @@ form button {
   }
 
   .footer-header {
-    font-size: .9em !important;
+    font-size: .95rem !important;
   }
 
   p {
@@ -459,7 +461,7 @@ form button {
   }
 
   .site-navigation-item a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .site-navigation #logo {
@@ -535,7 +537,7 @@ form button {
   }
 
   .footer-header {
-    font-size: .9em !important;
+    font-size: .95rem !important;
   }
 
   p {
@@ -544,7 +546,7 @@ form button {
   }
 
   .site-navigation-item a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .site-navigation #logo {
@@ -588,7 +590,7 @@ form button {
   }
 
   .footer-header {
-    font-size: .9em !important;
+    font-size: 1rem !important;
   }
 
   p {
@@ -597,7 +599,7 @@ form button {
   }
 
   .site-navigation-item a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .site-navigation #logo {

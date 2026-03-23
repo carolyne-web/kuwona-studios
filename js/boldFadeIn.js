@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const rows = groupByRows(Array.from(boldBirdElements));
     console.log('Created ' + rows.length + ' rows');
     const delayBetweenRows = 800; // ms delay between rows
-    const initialDelay = 100; // Small delay before starting animation
+    const initialDelay = 500; // Delay before starting animation
 
     rows.forEach(function(row, index) {
       console.log('Row ' + index + ' scheduled for ' + (initialDelay + index * delayBetweenRows) + 'ms, contains ' + row.elements.length + ' elements');
@@ -85,11 +85,15 @@ document.addEventListener('DOMContentLoaded', function() {
   if (birdOnlyElements.length > 0) {
     function isInViewport(element) {
       const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+      // Check if at least part of the element is visible
       return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.top < windowHeight &&
+        rect.bottom > 0 &&
+        rect.left < windowWidth &&
+        rect.right > 0
       );
     }
 
@@ -101,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // Initial check on page load
-    handleVisibility();
+    // Initial check on page load with slight delay to ensure layout is complete
+    setTimeout(handleVisibility, 100);
 
     // Listen for scroll and resize events
     window.addEventListener('scroll', handleVisibility);

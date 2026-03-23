@@ -21,7 +21,7 @@
 ### Portfolio.html Structure:
 ```
 01  kuwona digital
-    digital solutions & marketing consultancy
+    custom software and automation to solve business inefficiencies
 
 02  parabl
     online bookstore

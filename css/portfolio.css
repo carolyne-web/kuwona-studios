@@ -34,7 +34,8 @@ body.portfolio-page {
 .portfolio-page h2 {
   color: #001B1B;
   margin-bottom: 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
 }
 
 .portfolio-item {
@@ -55,7 +56,7 @@ body.portfolio-page {
 }
 
 .venture-name {
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
   font-family: "Satoshi-Variable", sans-serif;
   color: #001B1B;
   display: inline-block;
@@ -77,8 +78,8 @@ body.portfolio-page {
 .venture-name a {
   color: #001B1B;
   text-decoration: none;
-  font-family: 'IBM Plex Mono', monospace;
-  text-transform: uppercase;
+  font-family: 'Satoshi-Variable', sans-serif;
+  text-transform: lowercase;
   font-weight: 400;
 }
 
@@ -87,7 +88,7 @@ body.portfolio-page {
 }
 
 .venture-name:hover {
-  font-size: 1.1rem;
+  font-size: clamp(1.15rem, 1.8vw, 1.6rem);
   color: #001B1B;
 }
 
@@ -122,7 +123,7 @@ body.portfolio-page {
   }
 
   .venture-name:hover {
-    font-size: 1.5vw;
+    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
   }
 }
 
@@ -166,9 +167,9 @@ body.portfolio-page {
   padding: 4px 12px;
   border-radius: 4px;
   font-size: clamp(0.75rem, 1.2vw, 0.9rem);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 0.5px;
 }
 
@@ -198,8 +199,9 @@ body.portfolio-page {
 .meta-item {
   font-size: clamp(0.95rem, 1.4vw, 1.2rem);
   color: #728181;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Satoshi-Variable', sans-serif;
   font-weight: 300;
+  text-transform: lowercase;
 }
 
 .meta-label {
