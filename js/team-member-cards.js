@@ -29,24 +29,30 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(card);
   });
 
-  // Optional: Add click handlers for CTA buttons
+  // Add click handlers for CTA buttons with mobile touch feedback
   const ctaButtons = document.querySelectorAll('.team-member-cta');
   ctaButtons.forEach((button, index) => {
     button.addEventListener('click', function() {
+      // Add active class for mobile touch feedback
+      this.classList.add('active');
+
+      setTimeout(() => {
+        this.classList.remove('active');
+      }, 300);
+
       // You can add functionality here, for example:
       // - Open a modal with more info
+      // - Navigate to LinkedIn/Instagram/personal website
       // - Scroll to contact section
-      // - Navigate to a detailed profile page
 
-      // For now, let's just log to console
       const card = this.closest('.team-member-card');
       const name = card.querySelector('.first-name').textContent + ' ' +
                    card.querySelector('.last-name').textContent;
 
       console.log(`Clicked on ${name}'s profile`);
 
-      // Example: Scroll to contact section
-      // window.location.href = '/contact';
+      // Future: Add social links
+      // window.open('https://linkedin.com/in/...', '_blank');
     });
   });
 

@@ -371,8 +371,14 @@
     align-items: flex-start !important;
   }
 
+  .team-member-info {
+    display: flex;
+    flex-direction: column;
+  }
+
   .team-member-name {
     text-align: left !important;
+    order: 1;
   }
 
   .first-name,
@@ -381,13 +387,35 @@
   }
 
   .team-member-details {
-    flex-direction: column !important;
-    gap: 24px;
+    flex-direction: row !important;
+    gap: 16px;
+    order: 0;
+    align-items: center;
+    margin-bottom: 16px;
   }
 
   .team-member-cta {
     width: 60px;
     height: 60px;
+    order: 0;
+  }
+
+  /* Add touch interaction for mobile */
+  .team-member-cta:active,
+  .team-member-cta.active {
+    border-color: #596A6A;
+    background-color: rgba(89, 106, 106, 0.1);
+    transform: scale(1.1);
+  }
+
+  .team-member-cta:active .arrow-icon,
+  .team-member-cta.active .arrow-icon {
+    color: #F2FBFB;
+    transform: rotate(-45deg);
+  }
+
+  .team-member-bio {
+    order: 1;
   }
 
   .arrow-icon {
