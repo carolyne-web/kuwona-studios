@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.kuwonastudios.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/about.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/about</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/portfolio.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/portfolio</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/kuwona-digital.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/kuwona-digital-info</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/parabl.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/parabl</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/mycommunity-mypeople.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/mycommunity-mypeople</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/insight.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/insight</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/contact.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/contact</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/terms.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/terms</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.kuwonastudios.com/privacy.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <loc>https://www.kuwonastudios.com/privacy</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
