@@ -1,0 +1,37 @@
+# Ignore all static files - site is hosted on GitHub Pages
+# Only deploy /api folder to Vercel
+
+# HTML files
+*.html
+!api/**/*.html
+
+# Static assets
+css/
+js/
+images/
+fonts/
+assets/
+
+# Documentation
+*.md
+!README.md
+
+# Git
+.git/
+.gitignore
+
+# Other directories
+about/
+contact/
+insight/
+portfolio/
+privacy/
+terms/
+kuwona-digital-info/
+
+# Keep these for Vercel
+!api/
+!package.json
+!package-lock.json
+!node_modules/
+!vercel.json
